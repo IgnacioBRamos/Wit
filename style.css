@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+    background-color: rgb(103, 67, 185)
+}
+.letras{
+    color: white !important;
+    
+}
+
+
+.seccion1{
+            /*background: url('pruebamac.jpg') no-repeat center center fixed;*/
+            background-size: cover;
+            color: blue;
+            height: 100vh;
+}
+
+.seccion1 h2{
+    color: black;
+}
+#boton{
+
+    background-color: orange;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: 400px;
+    color: white;
+}
+
+.texto{
+    margin: auto;
+    width: 1000px;
+    position: fixed;
+    top: 280px;
+    left: 480px;
+}
+
+
+.texto1{
+    margin: auto;
+    width: 1000px;
+    
+}
+
+
+.title{
+    font-size: 100px;
+}
