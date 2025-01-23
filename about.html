@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="principal-container">
+        <header class="navbar">
+            <img src="/images/wit.svg" alt="Logo">
+            <img id="open" class="open-menu" src="/images/menuIcon.svg" alt="">
+
+            <nav id="nav" class="total-list ">
+                <img id="close" class="close-menu" src="/images/crossIcon.svg" alt="">
+
+                <ul class="list left">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                </ul>
+                <ul class="list right">
+                    <li><a href="#">Client support</a></li>
+                    <li class="get-in-touch"><a href="/about.html">Get in touch</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <main class="main-container">
+            <section class="about">
+                <div>
+                    <h1><span>About WIT</span></h1>
+                    <p>At Wit, we specialize in delivering professional network solutions tailored to meet your needs.
+                        From installation and configuration to troubleshooting complex issues, our expertise ensures
+                        reliable and secure network performance.
+                        With years of experience and a commitment to excellence, Wit is your trusted partner for all
+                        things networking.
+                        Let us help you build and maintain a network that works seamlessly—because your success is our
+                        priority.</p>
+                </div>
+                <form action="" method="POST" id="formulario">
+                    <label for="name">Name</label>
+                    <input type="text" name="Name" id="name"><br>
+                    <label for="name">Phone</label>
+                    <input type="text" name="Phone" id="phone"><br>
+                    <label for="name">Email</label>
+                    <input type="text" name="Email" id="email">
+                    <label for="name">Message</label>
+                    <textarea name="Message" id="message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </section>
+            <section>
+                <h2>How it works</h2>
+                <div class="card-container">
+                    <div class="card first">
+                        <h3>1. Fill out the contact form</h3>
+                        <img src="/images/icon/boardicon.svg" alt="">
+                        <p>Start by filling out our simple contact form. Share your details and describe the issue
+                            you’re experiencing so we can better understand your needs.</p>
+                    </div>
+                    <div class="card second">
+                        <h3>2. We contact you</h3>
+                        <img src="/images/icon/commenticon.svg" alt="">
+                        <p>Once we receive your form, a member of our team will contact you promptly. We’ll discuss your
+                            problem in detail and explain how we can help.</p>
+                    </div>
+                    <div class="card third">
+                        <h3>3. Problem solved</h3>
+                        <img src="/images/icon/gearicon.svg" alt="">
+                        <p>Our experienced team will take care of everything, ensuring your problem is resolved quickly
+                            and with the highest level of professionalism.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h4 style="margin-bottom: 10px;">We are proud partners of</h4>
+                    <div class="partners">
+                        <img class="logo1" src="/images/logos/logoLenovo.svg" alt="Lenovo logo" width="60px">
+                        <img class="logo1" src="/images/logos/logoUnify.svg" alt="Unify logo" width="60px">
+                        <img class="logo2" src=" /images/logos/logoDW.svg" alt="Digital Warehouse logo" width="30px">
+                        <img class="logo3" src="/images/logos/logoFirewalla.svg" alt="Firewala logo" width="90px">
+                        <img class="logo1" src="/images/logos/logoReolink.svg" alt="Reolink logo" width="60px">
+                        <img class="logo2" src="/images/logos/logoDell.svg" alt="Dell logo" width="30px">
+                    </div>
+                </div>
+                <div class="list-footer">
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li>Washington DC</li>
+                        <li>Virginia</li>
+                    </ul>
+                </div>
+            </div>
+            <h6 class="copyright">© 2025 WIT Solutions Group. All rights reserved. · About
+                WIT · Privacy Policy </h6>
+        </footer>
+    </div>
+    <script>
+        const nav = document.querySelector("#nav");
+        const open = document.querySelector("#open");
+        const close = document.querySelector("#close");
+
+
+
+        open.addEventListener("click", () => {
+
+            nav.classList.add("visible");
+        })
+
+        close.addEventListener("click", () => {
+
+            nav.classList.remove("visible");
+        })
+    </script>
+</body>
+
+</html>
