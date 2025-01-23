@@ -4,25 +4,25 @@
 }
 @font-face {
     font-family: 'Archia';
-    src: url(/font/Archia-Regular.otf) format('opentype');
+    src: url(font/Archia-Regular.otf) format('opentype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Archia';
-    src: url(/font/Archia-Light.woff) format('opentype');
+    src: url(font/Archia-Light.woff) format('opentype');
     font-weight: lighter;
 }
 
 @font-face {
     font-family: 'Archia';
-    src: url(/font/Archia-Bold.woff) format('opentype');
+    src: url(font/Archia-Bold.woff) format('opentype');
     font-weight: bold;
 }
 
 body {
     background-color: #000E37;
-    background-image: url(/images/backroundiamge.svg);
+    background-image: url(images/backroundiamge.svg);
     background-size: cover;
     color: white;
 }
@@ -205,7 +205,8 @@ form input[type=submit] {
     padding: 7px;
     margin-top: 10px;
     border-radius: 10px 0px 10px 0px;
-    color: white;
+    color: #000E37;
+    font-weight: bold;
     background-color: #FF6600;
     cursor: pointer;
 }
@@ -960,7 +961,7 @@ form input[type=submit] {
 
     .box{
         
-        height: 5vh;
+        height: 4.5vh;
     }
 
     .services{
