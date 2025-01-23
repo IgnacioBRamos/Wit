@@ -52,6 +52,7 @@ body {
 
 .navbar img {
     width: 7vw;
+    height: auto;
     /* Ajusta el tamaño de la imagen */
 }
 
@@ -377,6 +378,23 @@ form input[type=submit] {
     margin: 20px 0px 0px 0px;
 }
 
+
+.logo1{
+    width: 2.2vw;
+    height: auto;
+}
+.logo2{
+    width: 1.2vw;
+    height: auto;
+}
+.logo3{
+    width: 4vw;
+    height: auto;
+}
+
+
+
+
 .copyright{
     margin-top: 1.5vh;
     text-align: center;
@@ -389,12 +407,7 @@ form input[type=submit] {
 
 
 
-/* Media Queries*/
 
-
-
-
-/* END Media Queries*/
 
 
 
