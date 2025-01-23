@@ -21,10 +21,10 @@
 }
 
 body {
+    background-color: #000E37;
     background-image: url(/images/backroundiamge.svg);
     background-size: cover;
     color: white;
-
 }
 
 #principal-container {
@@ -51,7 +51,7 @@ body {
 }
 
 .navbar img {
-    width: 5vw;
+    width: 7vw;
     /* Ajusta el tamaño de la imagen */
 }
 
@@ -83,7 +83,7 @@ body {
 .total-list a{
     color: white;
     text-decoration: none;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
 }
 .total-list a:hover{
     color: #26FF8F;
@@ -106,9 +106,7 @@ body {
 .get-in-touch:hover {
     background-color: #26FF8F;
     cursor: pointer;
-    a{
-        color: #9743FF;
-    }
+    color: #9743FF;
 }
 
 /* header img {
@@ -182,12 +180,15 @@ form input[type=text] {
     border-right: transparent;
     color: white;
     background-color: #000E37;
+    font-size: 0.8vw;
+    outline: none;
 }
 
 form textarea {
+    outline: none;
     margin-top: 10px;
     width: 100%;
-    height: 70px;
+    height: 50px;
     border: 1px solid white;
     border-top: transparent;
     border-left: transparent;
@@ -195,6 +196,7 @@ form textarea {
     color: white;
     background-color: #000E37;
     resize: none;
+    font-size: 0.8vw;
 }
 
 form input[type=submit] {
@@ -206,6 +208,8 @@ form input[type=submit] {
     background-color: #FF6600;
     cursor: pointer;
 }
+
+
 
 
 
@@ -225,9 +229,9 @@ form input[type=submit] {
 }
 
 
-.carousel-container {
+/* .carousel-container {
     
-}
+} */
 
 .carousel-container h2 {
     font-size: 2rem;
@@ -374,7 +378,7 @@ form input[type=submit] {
 }
 
 .copyright{
-    margin-top: 2vh;
+    margin-top: 1.5vh;
     text-align: center;
     width: 100%;
     color: white;
@@ -789,23 +793,24 @@ form input[type=submit] {
         ul{
             display: flex;
             flex-direction: column;
-            align-items: end;
-            
+            align-items: end;   
             gap: 10px;
         }
     }
     .total-list a{
-        font-size: 12px;
+        font-size: 4vw;
     }
     .get-in-touch{
-        font-size: 40px;
         padding: 5px 12px;
         display: flex;
-
         background-color: #9743FF;
+        
+    }
+    .get-in-touch:hover{
+        color: #000E37;
     }
     .get-in-touch a{
-        font-size: 10px;
+        font-size: 4vw;
 
     } 
 
@@ -829,16 +834,17 @@ form input[type=submit] {
     }
     form{
         width: 100%;
-        font-size: 1rem;
         margin: 5vh 0;
     }
     form input[type=text]{
         padding: 5px 1px;
         width: 98%;
+        font-size: 6vw;
     }
 
     form textarea{
         height: 70px;
+        font-size: 6vw;
     }
     #truearrow{
         display: none;
@@ -912,32 +918,36 @@ form input[type=submit] {
     #secondary-container{
         max-width: 95% ;
     }
-
+    .services-container{
+        margin-top: 10vh;
+    }
     .texto{
         font-size: 2.8vw;
     }
-   
+    .detail-description p{
+        width: 90%;
+    }
     .detail-items{
         min-width: 41vw !important;
-        gap: 11px;
+        gap: 14px;
         margin: 10px 4px;
         min-width: 34vw;
     }
     
     .detail-items li{
-        font-size: 3.4vw;
-        padding: 5px;
+        font-size: 3vw;
+        padding: 5px 14px;
         border-radius: 30px;
         transition: 2s;
     }
 
     .detail-container{
-        height: 340px;
+        height: 380px;
     }
 
     .box{
-        width: 36vw;
-        height: 3vh;
+        
+        height: 5vh;
     }
 
     .services{

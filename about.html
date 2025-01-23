@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="We offer a wide range of services designed for both residential and business needs, catering to small, medium, and large enterprises. Rest assured, you are in capable hands with us.">
+    <title>About | Managed IT Services | IT Consulting & Business Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,12 +19,12 @@
                 <img id="close" class="close-menu" src="/images/crossIcon.svg" alt="">
 
                 <ul class="list left">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/services.html">Services</a></li>
                 </ul>
                 <ul class="list right">
                     <li><a href="#">Client support</a></li>
-                    <li class="get-in-touch"><a href="/about.html">Get in touch</a></li>
+                    <a href="/about.html"><li class="get-in-touch">Get in touch</li></a>
                 </ul>
             </nav>
         </header>
@@ -42,15 +43,11 @@
                         Let us help you build and maintain a network that works seamlessly—because your success is our
                         priority.</p>
                 </div>
-                <form action="" method="POST" id="formulario">
-                    <label for="name">Name</label>
-                    <input type="text" name="Name" id="name"><br>
-                    <label for="name">Phone</label>
-                    <input type="text" name="Phone" id="phone"><br>
-                    <label for="name">Email</label>
-                    <input type="text" name="Email" id="email">
-                    <label for="name">Message</label>
-                    <textarea name="Message" id="message"></textarea>
+                <form action="https://formspree.io/f/xeoeqlyk" method="POST" id="formulario">
+                    <label for="name">Name</label><input type="text" name="Name" id="name" maxlength="50"><br>
+                    <label for="phone">Phone</label><input type="text" name="Phone" id="phone" maxlength="15"><br>
+                    <label for="email">Email</label><input type="text" name="Email" id="email" maxlength="254">
+                    <label for="message">Message</label><textarea name="Message" id="message" maxlength="500"></textarea>
                     <input type="submit" value="Send">
                 </form>
             </section>
@@ -111,22 +108,9 @@
         </footer>
     </div>
     <script>
-        const nav = document.querySelector("#nav");
-        const open = document.querySelector("#open");
-        const close = document.querySelector("#close");
-
-
-
-        open.addEventListener("click", () => {
-
-            nav.classList.add("visible");
-        })
-
-        close.addEventListener("click", () => {
-
-            nav.classList.remove("visible");
-        })
+        
     </script>
+    <script src="/script3.js"></script>
 </body>
 
 </html>

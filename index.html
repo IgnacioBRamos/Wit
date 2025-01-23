@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Managed IT Service Provider offering IT consulting services, business IT solutions, web design, and technical assistance to optimize your technology needs.">
+  <meta name="keywords" content="Technology,IT,web design,help technology,Managed IT Service Provider,IT consulting services,business IT,IT for Business,IT solutions,technical assistance,business technology services,startup business">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="style.css">
-  <title> WIT | IT Solutions</title>
+  <title> WIT | Managed IT Services | IT Consulting & Business Solutions</title>
 </head>
 
 <body>
@@ -17,10 +19,10 @@
 
     <header class="navbar">
       <img src="/images/wit.svg" alt="Logo">
-      <img id="open" class="open-menu" src="/images/menuIcon.svg" alt="">
+      <img id="open" class="open-menu" src="/images/menuIcon.svg" alt="burger icon to open the menu">
       
       <nav id="nav" class="total-list ">
-          <img id="close" class="close-menu" src="/images/crossIcon.svg" alt="">
+          <img id="close" class="close-menu" src="/images/crossIcon.svg" alt="cross icon to close the menu">
           
           <ul class="list left">
               <li><a href="/index.html">Home</a></li>
@@ -28,7 +30,7 @@
           </ul>
           <ul class="list right">
               <li><a href="#">Client support</a></li>
-              <li><a href="/about.html" class="get-in-touch">Get in touch</a></li>
+              <a href="/about.html"><li class="get-in-touch">Get in touch</li></a>
           </ul>
       </nav>
   </header>
@@ -42,15 +44,11 @@
         </div>
 
         <form action="https://formspree.io/f/xannggzw" method="POST" id="formulario">
-          <label for="name">Name</label>
-          <input type="text" name="Name" id="name" ><br>
-          <label for="name">Phone</label>
-          <input type="text" name="Phone" id="phone" ><br>
-          <label for="name">Email</label>
-          <input type="text" name="Email" id="email" >
-          <label for="name">Message</label>
-          <textarea name="Message"  id="message"></textarea>
-          <input type="submit" value="Send">
+          <label for="name">Name</label><input type="text" name="Name" id="name" maxlength="50"><br>
+          <label for="phone">Phone</label><input type="text" name="Phone" id="phone" maxlength="15"><br>
+          <label for="email" >Email</label><input type="text" name="Email" id="email" maxlength="254">
+          <label for="message">Message</label><textarea name="Message"  id="message" maxlength="500"></textarea>
+          <input class="send-button" type="submit" value="Send">
         </form>
       </div>
 

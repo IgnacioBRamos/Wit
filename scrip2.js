@@ -110,7 +110,7 @@ function switchSection(section, xTranslate,parrafositos) {
                 if(section==detailBusiness){
                     cuadro.style.width = "36vw"
                 }else if(section == detailHome){
-                    cuadro.style.width = "34vw"
+                    cuadro.style.width = "33vw"
                     cuadro.style.left = `${(xTranslate)+4}vw`
                 }else{
                     cuadro.style.left = `${(xTranslate)+8.5}vw`
