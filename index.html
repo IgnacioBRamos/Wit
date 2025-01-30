@@ -4,13 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Managed IT Service Provider offering IT consulting services, business IT solutions, web design, and technical assistance to optimize your technology needs.">
-  <meta name="keywords" content="Technology,IT,web design,help technology,Managed IT Service Provider,IT consulting services,business IT,IT for Business,IT solutions,technical assistance,business technology services,startup business">
+  <meta name="description"
+    content="Professional Managed IT Service Provider offering IT consulting services, business IT solutions, web design, and technical assistance to optimize your technology needs.">
+  <meta name="keywords"
+    content="Technology,IT,web design,help technology,Managed IT Service Provider,IT consulting services,business IT,IT for Business,IT solutions,technical assistance,business technology services,startup business">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/ZorroWit.svg">
   <title> WIT | Managed IT Services | IT Consulting & Business Solutions</title>
 </head>
 
@@ -18,36 +40,33 @@
   <div id="principal-container">
 
     <header class="navbar">
-      <img src="images/wit.svg" alt="Logo">
+      <a href="#"><img src="images/wit.svg" alt="Logo"></a>
       <img id="open" class="open-menu" src="images/menuIcon.svg" alt="burger icon to open the menu">
-      
+
       <nav id="nav" class="total-list ">
-          <img id="close" class="close-menu" src="images/crossIcon.svg" alt="cross icon to close the menu">
-          
-          <ul class="list left">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-          </ul>
-          <ul class="list right">
-              <li><a href="#">Client support</a></li>
-              <li><a href="about.html" class="get-in-touch">Get in touch</a></li>
-          </ul>
+        <img id="close" class="close-menu" src="images/crossIcon.svg" alt="cross icon to close the menu">
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#">Client support</a></li>
+          <li><a href="about.html" class="get-in-touch">Get in touch</a></li>
+        </ul>
       </nav>
-  </header>
+    </header>
     <main class="main-container">
       <div class="hero">
-        <div class="hero-title" >
-          <h1><span>High-Quality</span> IT Solutions to Solve Your Technology Problems.</h1>
+        <div class="hero-title ">
+          <h1><span>Premium</span> IT solutions for your technology needs.</h1>
           <h3>Your trusted partner in IT management, offering seamless solutions and support to meet your technology
             challenges.</h3>
           <h3>Need immediate IT assistance? Fill out the form, and we'll get back to you shortly!</h3>
         </div>
 
-        <form action="https://formspree.io/f/xannggzw" method="POST" id="formulario">
+        <form action="https://formspree.io/f/xannggzw" method="POST" class="envioformulario" id="formulario">
           <label for="name">Name</label><input type="text" name="Name" id="name" maxlength="50"><br>
           <label for="phone">Phone</label><input type="text" name="Phone" id="phone" maxlength="15"><br>
-          <label for="email" >Email</label><input type="text" name="Email" id="email" maxlength="254">
-          <label for="message">Message</label><textarea name="Message"  id="message" maxlength="500"></textarea>
+          <label for="email">Email</label><input type="text" name="Email" id="email" maxlength="254">
+          <label for="message">Message</label><textarea name="Message" id="message" maxlength="500"></textarea>
           <input class="send-button" type="submit" value="Send">
         </form>
       </div>
@@ -62,10 +81,9 @@
 
 
       <div class="carousel-container">
-        <h2>Our testimonial</h2>
-        <span>What client say about us?</span>
+        <h2>What do clients say about us?</h2>
         <div class="testimonials owl-carousel">
-          <div class="testimonial-card">
+          <div class="testimonial-card ">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
             <div class="client-detail">
@@ -80,7 +98,7 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
             <div class="client-detail">
-              
+
               <div>
                 <h6>Maria López</h6>
                 <span>Descripcion</span>
@@ -93,7 +111,7 @@
               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</p>
 
             <div class="client-detail">
-              
+
               <div>
                 <h6>Juan Pérez</h6>
                 <span>Descripcion</span>
@@ -120,16 +138,12 @@
             <img class="logo2" src="images/logos/logoDell.svg" alt="Dell logo" width="1.2vw" height="auto">
           </div>
         </div>
-        <div class="list-footer">
-          <h4 >Areas Served</h4>
-          <ul>
-            <li>Washington DC</li>
-            <li>Virginia</li>
-          </ul>
-        </div>
+
       </div>
-      <h6 class="copyright">© 2025 WIT Solutions Group. All rights reserved. · About
-        WIT · Privacy Policy </h6>
+      <div>
+        <h6 class="copyright">© 2025 WIT Solutions Group. All rights reserved. · About WIT · Privacy Policy </h6>
+        <h6 style="text-align: center;">© This website is powered by WIT digital </h6>
+      </div>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

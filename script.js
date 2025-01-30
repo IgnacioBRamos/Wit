@@ -2,6 +2,9 @@ $(document).ready(function(){
     $('.testimonials').owlCarousel({
         loop: true,
         autoplay: true,
+        autoplayTimeout: 10000,
+        autoplaySpeed: 5000,
+        slideBy: 1,   
         margin: 15, /* Espacio entre los elementos */
         nav: true,
         responsive: {
@@ -29,11 +32,11 @@ async function handlesubmit(event){
     let regexPhone = /^\+?\d+$/g
 
     if(!regexEmail.test(email)){
-        alert("ingrese un mail valido")
+        alert("Please enter a valid email address.")
         return false
     }
     if(!regexPhone.test(phone)){
-        alert("ingrese un numero valido sin guiones ni espacios y el codigo de area es opcional")
+        alert("Please enter a valid number without dashes or spaces. The area code is optional.")
         return false
     }
     const form = new FormData(this)
@@ -47,8 +50,13 @@ async function handlesubmit(event){
     })
     if (response.ok){
         this.reset()
-        console.log(form)
-        alert("gracias por contactarme, te escribire pronto")
+        
+        // event.target.classList.add("envioformulario");
+        // setTimeout(()=>{
+        //     event.target.classList.remove("envioformulario");
+        // },5000)
+
+        alert("Thank you for reaching out. I will get back to you shortly.")
     }
 }
 

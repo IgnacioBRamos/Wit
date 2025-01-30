@@ -4,165 +4,204 @@ const detailBusiness = document.querySelector(".detail-business");
 const detailHome = document.querySelector(".detail-home");
 const detailWeb = document.querySelector(".detail-web");
 
-let prueba; // Identificador del intervalo
-let index = 0; // Índice global
+let interval; // Identificador del intervalo
+let currentIndex = 0; // Índice global
 let firstCycle = true; // Bandera para controlar la primera vuelta
 
 
 
-const parrafositos=[
-    "As a business owner, you need a network infrastructure solution that can grow with you and keep your operations running smoothly. Our solutions minimize risk, improve efficiency, and reduce operational costs over time. By choosing WIT Solutions Group, you invest in a solution that supports not only today’s business needs but also tomorrow’s technological advancements.",
-    "Security is an essential priority for any business, but managing it with multiple systems can be overwhelming. WIT Solutions Group provides comprehensive protection and peace of mind. Our approach not only safeguards your assets, employees, and sensitive information but also enables you to manage risks more effectively, all while reducing overhead costs and administrative burdens.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    "Lorem Ipsum is simply dummr text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    "Lorem Ipsum is simply dumma text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    "You’re juggling a million priorities every day, and managing complex projects just adds more to your plate. That’s where we come in. WIT Solutions Group service is designed specifically for busy professionals like you who don’t have the time to micromanage deadlines, resources, and deliverables.<br>Can we schedule 20 minutes to discuss how we can take your next project off your to-do list and turn it into a success story?",
-    "In today’s fast-paced business world, meetings are the cornerstone of collaboration and decision-making. But let’s face it—technical issues, outdated equipment, and cluttered setups waste valuable time and create unnecessary frustration.<br> WIT Solutions Group specializes in installing state-of-the-art systems tailored to your business needs, ensuring your conference room works as efficiently as you do."
-]
 
-
-
-
-// Función para restaurar estilos de una sección específica
-function resetStyles(section) {
-    const items = section.querySelectorAll(".detail-items li");
-    const parrafos = section.querySelectorAll(".detail-description p");
-
-    items.forEach(item => (item.style.opacity = 0.2));
-    parrafos.forEach(parrafo => (parrafo.style.opacity = 0));
+function agregarColor(items,index) {
+    // Eliminar la clase "active" de todos los elementos
+    items.forEach(item => item.classList.remove("active-item"));
+    // Agregar la clase "active" al elemento seleccionado
+    items[index].classList.add("active-item");
 }
 
-function startInterval(section,parrafositos) {
-    
 
 
-
-    const items = section.querySelectorAll(".detail-items li");
-    
-    resetStyles(section); // Restaura los estilos antes de iniciar
-    const testo = section.querySelector(".detail-description p");
-    testo.style.opacity = 1;
-    index = 0;
+function startInterval(section) {
 
 
+    const list = section.querySelector(".detail-items")
+    const texto = section.querySelectorAll(".detail-description p")
+    const items = Array.from(list.getElementsByTagName("li")); // Convertir NodeList a array para facilitar manipulación
 
 
-    prueba = setInterval(() => {
-        
-        // Resalta el elemento actual
-        items[index].style.opacity = 1;
-        
-        // console.log(parrafositos[index]);
-        testo.textContent = parrafositos[index];
-        
-        // Si no es la primera vuelta, opaca el último elemento al reiniciar
-        if (index === 0 && !firstCycle) {
-            items[items.length - 1].style.opacity = 0.2;
+    pauseInterval(); // Asegurarse de que no haya intervalos duplicados
+    interval = setInterval(() => {
+        // Actualizar el color del elemento actual
+        agregarColor(items,currentIndex);
 
+
+        texto[currentIndex].style.opacity = 1;
+
+        if (!firstCycle) {
+            const prevIndex = currentIndex === 0 ? texto.length - 1 : currentIndex - 1;
+            texto[prevIndex].style.opacity = 0;
+        } else {
+            if (currentIndex !== 0) {
+                texto[currentIndex - 1].style.opacity = 0;
+            }
         }
 
-        // Opaca el elemento anterior (excepto en la primera vuelta para el último)
-            
-        if (index > 0) {
-            
-            items[index - 1].style.opacity = 0.2;
-            
-            
+        // Restablecer el color del elemento anterior (solo después del primer ciclo)
+        if (!firstCycle) {
+            const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+            items[prevIndex].classList.remove("active");
         }
 
-        // Incrementa el índice
-        index++;
 
-        // Reinicia el índice y actualiza la bandera después de la primera vuelta
-        if (index === items.length) {
-            index = 0;
+        // Avanzar al siguiente elemento
+        currentIndex = (currentIndex + 1) % items.length;
+
+        // Cambiar bandera después del primer ciclo completo
+        if (currentIndex === 0) {
             firstCycle = false;
         }
-    }, 2000); // Ejecuta cada 2 segundos
+    }, 5000); // Ejecuta cada 2 segundos
 }
 
 function pauseInterval() {
-    clearInterval(prueba); // Detiene el intervalo
-    console.log("Intervalo pausado");
+    if (interval) {
+        clearInterval(interval);
+        console.log("Intervalo pausado");
+    }
 }
 
 
 
-function switchSection(section, xTranslate,parrafositos) {
+
+function itemsClickable(section) {
+    const list = section.querySelector(".detail-items"); // Contenedor de la lista
+    const texto = section.querySelectorAll(".detail-description p"); // Párrafos asociados
+    const items = Array.from(list.getElementsByTagName("li")); // Convertir NodeList en array
+
+    if (!list || items.length === 0) {
+        console.error("La lista o los elementos no se encontraron en la sección.");
+        return;
+    }
+    
+    // Listener para manejar clics en los elementos de la lista
+    list.addEventListener("click", (event) => {
+        
+        const clickedElement = event.target;
+
+        // Verificar si el elemento clickeado es un `li`
+        if (clickedElement.tagName === "LI") {
+            const index = items.indexOf(clickedElement); // Obtener índice del elemento clickeado
+            if (index !== -1) {
+                console.log(`Elemento clickeado, índice: ${index}`);
+
+                pauseInterval(); // Pausar el intervalo actual
+
+                texto.forEach(parrafo => (parrafo.style.opacity = 0));
+
+                // Actualizar el color del elemento clickeado
+                agregarColor(items, index);
+
+                // Actualizar el índice actual y mostrar el texto asociado
+                currentIndex = index;
+                texto[currentIndex].style.opacity = 1;
+
+                // Reiniciar el intervalo después de un breve retraso
+                setTimeout(() => {
+                    firstCycle = false; // Marca que no es el primer ciclo
+                    startInterval(section); // Reinicia el intervalo para la sección actual
+                }, 5000);
+            }
+        }
+    });
+}
+
+
+
+
+
+function switchSection(section, xTranslate) {
     // Restablece todas las secciones
     detailHome.style.opacity = 0;
+    detailHome.style.zIndex = 0;
     detailWeb.style.opacity = 0;
+    detailWeb.style.zIndex = 0;
     detailBusiness.style.opacity = 0;
-
+    detailBusiness.style.zIndex = 0;
 
     // Activa la sección seleccionada
     section.style.opacity = 1;
+    section.style.zIndex = 4;
 
     
 
-
     cuadro.style.left = `${xTranslate}vw`
+
+    firstCycle = true; // Reinicia la bandera de ciclo
+    currentIndex = 0; // Reinicia el índice
+
+
+    const texto = section.querySelectorAll(".detail-description p");
+    texto.forEach(parrafo => (parrafo.style.opacity = 0)); // Oculta todos los textos
 
     const queries = [
         {
             query: '(max-width: 480px)',
             action: () => {
-                if(section==detailBusiness){
+                if (section == detailBusiness) {
                     cuadro.style.width = "36vw"
-                }else if(section == detailHome){
+                } else if (section == detailHome) {
                     cuadro.style.width = "33vw"
-                    cuadro.style.left = `${(xTranslate)+4}vw`
-                }else{
-                    cuadro.style.left = `${(xTranslate)+8.5}vw`
+                    cuadro.style.left = `${(xTranslate) + 4}vw`
+                } else {
+                    cuadro.style.left = `${(xTranslate) + 8.5}vw`
                     cuadro.style.width = "28vw";
                 }
-                
+
                 console.log('Pantalla pequeña: max-width 480px');
             },
         },
         {
             query: '(min-width: 481px) and (max-width: 768px)',
             action: () => {
-                if(section==detailBusiness){
+                if (section == detailBusiness) {
                     cuadro.style.width = "23vw";
-                }else if(section == detailHome){
+                } else if (section == detailHome) {
                     cuadro.style.width = "20vw";
-                    cuadro.style.left = `${(xTranslate)-3}vw`
-                }else{
+                    cuadro.style.left = `${(xTranslate) - 3}vw`
+                } else {
                     cuadro.style.width = "19vw";
-                    cuadro.style.left = `${(xTranslate)-7}vw`
+                    cuadro.style.left = `${(xTranslate) - 7}vw`
                 }
-                
+
                 console.log('Pantalla mediana: 481px - 768px');
             },
         },
         {
             query: '(min-width: 769px) and (max-width: 1440px)',
             action: () => {
-                if(section==detailBusiness){
+                if (section == detailBusiness) {
                     cuadro.style.width = "16vw";
-                }else if(section == detailHome){
+                } else if (section == detailHome) {
                     cuadro.style.width = "13vw";
                     cuadro.style.left = `${(xTranslate)}vw`
-                }else{
+                } else {
                     cuadro.style.width = "13vw";
-                    cuadro.style.left = `${(xTranslate)-1}vw`
+                    cuadro.style.left = `${(xTranslate) - 1}vw`
                 }
-                
+
                 console.log('Pantalla grande: 769px - 1440px');
             },
-        },{
+        }, {
             query: '(min-width: 1441px) and (max-width: 2000px)',
             action: () => {
-                
 
-                if(section==detailBusiness){
+
+                if (section == detailBusiness) {
                     cuadro.style.width = "12vw"
-                }else if(section == detailHome){
-                    cuadro.style.left = `${(xTranslate)-1.5}vw`
+                } else if (section == detailHome) {
+                    cuadro.style.left = `${(xTranslate) }vw`
                     cuadro.style.width = "12vw"
-                }else{
-                    cuadro.style.left = `${(xTranslate)+1}vw`
+                } else {
+                    cuadro.style.left = `${(xTranslate) + 1}vw`
                     cuadro.style.width = "11vw";
                 }
 
@@ -172,15 +211,15 @@ function switchSection(section, xTranslate,parrafositos) {
         {
             query: '(min-width: 2001px)',
             action: () => {
-                
 
-                if(section==detailBusiness){
+
+                if (section == detailBusiness) {
                     cuadro.style.width = "12vw"
-                }else if(section == detailHome){
-                    cuadro.style.left = `${(xTranslate)-5.1}vw`
+                } else if (section == detailHome) {
+                    cuadro.style.left = `${(xTranslate) - 5.1}vw`
                     cuadro.style.width = "12vw"
-                }else{
-                    cuadro.style.left = `${(xTranslate)-8}vw`
+                } else {
+                    cuadro.style.left = `${(xTranslate) - 8}vw`
                     cuadro.style.width = "10vw";
                 }
 
@@ -188,7 +227,7 @@ function switchSection(section, xTranslate,parrafositos) {
             },
         },
     ];
-    
+
     // Función para evaluar todas las media queries
     function evaluateMediaQueries() {
         queries.forEach(({ query, action }) => {
@@ -198,7 +237,7 @@ function switchSection(section, xTranslate,parrafositos) {
             }
         });
     }
-    
+
     // Escuchar cambios en cada media query
     queries.forEach(({ query, action }) => {
         const mediaQuery = window.matchMedia(query);
@@ -208,20 +247,22 @@ function switchSection(section, xTranslate,parrafositos) {
             }
         });
     });
-    
+
     // Evaluar las media queries al cargar la página
     evaluateMediaQueries();
+
+
     
-
-
-
+    // Manejador de eventos para clics en los elementos de la lista
+   
+   
 
 
     // cuadro.style.transform = `translate(${xTranslate}%, 0px)`;
-    
 
+    
     pauseInterval(); // Pausa cualquier intervalo activo
-    startInterval(section,parrafositos); // Inicia el intervalo para la sección seleccionada
+    startInterval(section); // Inicia el intervalo para la sección seleccionada
 }
 
 
@@ -229,17 +270,20 @@ function switchSection(section, xTranslate,parrafositos) {
 
 // Funciones para manejar los botones
 function firstD() {
-    switchSection(detailBusiness, 0,parrafositos); // Mueve la caja y activa Business
+    switchSection(detailBusiness, 0); // Mueve la caja y activa Business
+    itemsClickable(detailBusiness)
     // cuadro.style.width = "12vw";
 }
 
 function secondD() {
-    switchSection(detailHome,30,parrafositos); // Mueve la caja y activa Home
+    switchSection(detailHome, 30); // Mueve la caja y activa Home
+    itemsClickable(detailHome)
     // cuadro.style.width = "12vw";
 }
 
 function thirdD() {
-    switchSection(detailWeb, 58,parrafositos); // Mueve la caja y activa Web
+    switchSection(detailWeb, 58); // Mueve la caja y activa Web
+    itemsClickable(detailWeb)
     // cuadro.style.width = "10vw";
     // cuadro.style.right = "0vw";
 }
@@ -263,13 +307,13 @@ const close = document.querySelector("#close");
 
 
 
-open.addEventListener("click",()=>{
-    
+open.addEventListener("click", () => {
+
     nav.classList.add("visible");
 })
 
-close.addEventListener("click",()=>{
-    
+close.addEventListener("click", () => {
+
     nav.classList.remove("visible");
 })
 
