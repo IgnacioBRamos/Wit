@@ -147,6 +147,9 @@ body {
     }
 }
 
+
+
+
 .hero h3 {
     font-size: 18px;
     color: white;
@@ -400,12 +403,7 @@ form.envioformulario::before{
     gap: 10px;
 }
 
-.list-footer {
-    list-style-position: inside;
-    h4{
-        margin-bottom: 10px;
-    }
-}
+
 
 .footer-container{
     display: flex; 
@@ -548,13 +546,11 @@ form.envioformulario::before{
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-
-    img {
-        width: 1vw;
-        margin-right: 10px;
-    }
 }
-
+.item img{
+    width: 1vw;
+    margin-right: 10px;
+}
 
 
 
@@ -656,13 +652,17 @@ form.envioformulario::before{
     display: flex;
     align-items: center;
     position: relative;
-    p{   
-        position: absolute;
-        padding: 20px;
-        opacity: 0;
-        transition: 2s;
-    }
 }
+
+
+.detail-description p{
+    position: absolute;
+    padding: 20px;
+    opacity: 0;
+    transition: 2s;
+}
+
+
 
 .detail-description p:first-child{
     opacity: 1;
