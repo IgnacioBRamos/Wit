@@ -214,13 +214,13 @@ function switchSection(section, xTranslate) {
 
 
                 if (section == detailBusiness) {
-                    cuadro.style.width = "12vw"
+                    cuadro.style.width = "13vw"
                 } else if (section == detailHome) {
-                    cuadro.style.left = `${(xTranslate) - 5.1}vw`
+                    cuadro.style.left = `${(xTranslate) - 5}vw`
                     cuadro.style.width = "12vw"
                 } else {
-                    cuadro.style.left = `${(xTranslate) - 8}vw`
-                    cuadro.style.width = "10vw";
+                    cuadro.style.left = `${(xTranslate) - 10}vw`
+                    cuadro.style.width = "12vw";
                 }
 
                 console.log('Pantalla extra grande: min-width 1441px');
@@ -324,4 +324,25 @@ close.addEventListener("click", () => {
 
 
 
+const scrollers = document.querySelectorAll(".scroller");
 
+if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    addAnimation()
+}
+
+
+function addAnimation(){
+    scrollers.forEach(scroller=>{
+        scroller.setAttribute("data-animated",true);
+        
+        const scrollerInner = scroller.querySelector(".scroller-inner")
+        const scrollerContent = Array.from(scrollerInner.children)
+
+        scrollerContent.forEach(item =>{
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden",true)
+            scrollerInner.appendChild(duplicatedItem)
+        })
+
+    })
+}

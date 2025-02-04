@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 @font-face {
     font-family: 'Archia';
@@ -32,10 +33,9 @@ body {
     flex-direction: column;
     max-width: 70%;
     margin: 0 auto;
-    box-sizing: border-box;
     font-family: "Archia",sans-serif;
     min-height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -47,11 +47,11 @@ body {
     justify-content: space-between;
     /* Divide los elementos a los extremos */
     align-items: center;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .navbar img {
-    width: 7vw;
+    width: 8vw;
     height: auto;
     /* Ajusta el tamaño de la imagen */
 }
@@ -83,7 +83,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1vw;
-    font-weight: bold;
+    font-weight: normal;
     transition: color 0.5s;     
 }
 .total-list a:hover{
@@ -155,14 +155,16 @@ body {
     color: white;
     line-height: 2.5rem;
     font-weight: 600;
-    
+    max-width: 60ch;
     font-family: "Montserrat",serif;
 
 }
 
 #truearrow {
-    display: flex;
+    display: none;
     justify-content: center;
+    position: absolute;
+
 }
 
 .hero {
@@ -174,6 +176,7 @@ body {
 /* Form */
 form {
     margin-right: 5px;
+    margin-top: 1rem;
     width: 400px;
     font-family: "Montserrat",serif;
     position: relative;
@@ -265,7 +268,22 @@ form.envioformulario::before{
 
 .testimonials {
     margin-top: 30px;
+    -webkit-mask:linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
 }
+
 
 
 /* .carousel-container {
@@ -281,7 +299,7 @@ form.envioformulario::before{
     
     position: relative;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
     /* Padding interno */
     background-color: #000E37;
     border: 1px solid rgba(255, 255, 255, 0.644);
@@ -298,29 +316,37 @@ form.envioformulario::before{
     /* Centra los elementos verticalmente */
     height: 200px;
     /* Asegura que todos los elementos estén centrados */
+    gap: 1rem;
 }
 
 .testimonial-card img {
-    max-width: 80px;
-    height: auto;
+    
     border-radius: 50%;
-    margin: 10px 10px;
 }
 
+
+.client-detail{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    
+    width: 80%;
+}
+
+
+
 .testimonial-card h6 {
-    margin: 10px 0 0;
     font-size: 16px;
     font-weight: bold;
     color: white;
 }
 
 .testimonial-card p {
-    font-size: 14px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    font-size: 12px;
     text-align: center;
     font-family: "Montserrat",serif;
     color: #fff;
+
 }
 
 
@@ -355,7 +381,18 @@ form.envioformulario::before{
 }
 
 
+.firm{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2px;
+}
 
+.firm span{
+    font-size: 12px;
+}
 
 /* Estilo para los botones de navegación */
 /* .owl-nav button {
@@ -397,10 +434,43 @@ form.envioformulario::before{
 
 
 /* Footer */
-.partners {
+
+
+.scroller{
+    max-width: 600px;
+    outline: 1px solid green;
+}
+.scroller-inner{
+    padding-block: 1rem;
     display: flex;
+    gap: 3rem;
+}
+
+
+.scroller[data-animated="true"]{
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,transparent, white 20%, white 80%,transparent);
+    mask: linear-gradient(90deg,transparent, white 20%, white 80%,transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+    
+}
+
+
+@keyframes scroll{
+    to{
+        transform: translate(calc(-50% - 1.5rem));
+    }
+}
+
+.partners {
+    /* display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; */
 }
 
 
@@ -414,15 +484,15 @@ form.envioformulario::before{
 
 
 .logo1{
-    width: 2.2vw;
+    width: 4rem;
     height: auto;
 }
 .logo2{
-    width: 1.2vw;
+    width: 3rem;
     height: auto;
 }
 .logo3{
-    width: 4vw;
+    width: 8rem;
     height: auto;
 }
 
@@ -504,10 +574,25 @@ form.envioformulario::before{
 }
 
 
+
+
+.services-title{
+    margin: 5rem 0 8rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.services-title span{
+    background: linear-gradient(to right, #FF6600, #DE0AFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
 .services-container {
     flex: 1;
-    margin-top: 15vh;
-
 }
 
 
@@ -524,17 +609,16 @@ form.envioformulario::before{
 }
 
 .business,.home,.web{
-    font-size: 0.7vw;
+    font-size: 0.8vw;
 }
 
 
 .box {
     position: absolute;
-    width: 12vw;
-    height: 4.5vh;
+    width: 30vw;
+    height: 3rem;
     background-color: #9843ff21;
     border-radius: 10px 10px 0px 0px;
-    /* transition: transform 0.3s ease, width 0.3s ease; */
     transition: 1s;
     
 }
@@ -544,12 +628,13 @@ form.envioformulario::before{
 .item {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
     cursor: pointer;
 }
 .item img{
-    width: 1vw;
-    margin-right: 10px;
+    width: 1.5vw;
 }
 
 
@@ -603,14 +688,7 @@ form.envioformulario::before{
 }
 
 
-.active-item{
-    background-color: #ff6600 !important;
-    opacity: 1 !important;
-    /* transition: 2s; */
-    transition: all 400ms ease;
-    transform: scale(1.1, 1.1);
-    box-shadow: 0px 5px 5px 1px #000000;
-}
+
 
 
 .manejado{
@@ -626,28 +704,34 @@ form.envioformulario::before{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 40px;
     gap: 20px;
     
 }
 
 .detail-items li{
     cursor: pointer;
-    background-color: #ff6600;
+    background-color: #ff6600c9;
     list-style: none;
     padding: 10px;
     border-radius: 30px;
     transition: 2s;
-    opacity: 0.6;
+    color: white;
 }
-/* .detail-items li:first-child{
-    opacity: 1;
-} */
+
+
+.active-item{
+    background-color: #ff6600 !important;
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 5px 5px 1px #000000;
+}
+
 
 
 
 .detail-description{
-    width: 70%;
+    width: 50%;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     align-items: center;
@@ -659,7 +743,7 @@ form.envioformulario::before{
     position: absolute;
     padding: 20px;
     opacity: 0;
-    transition: 2s;
+    transition: opacity 2s;
 }
 
 
@@ -672,7 +756,7 @@ form.envioformulario::before{
     color: white;
     opacity: 1;
     transition: 1s;
-    line-height: 2rem;
+    line-height: 3;
     font-weight: 600;
     font-family: "Montserrat";
 }
@@ -731,7 +815,7 @@ form.envioformulario::before{
 
 .about p{
     font-size: 1vw;
-    line-height: 2rem;
+    line-height: 2;
     font-weight: 600;    
     font-family: "Montserrat",serif;
 }
@@ -740,28 +824,29 @@ form.envioformulario::before{
 .card-container{
     margin-top: 2vh;
     display: flex;
-    justify-content: space-between;
-    gap: 12vw;
+    justify-content: space-around;
 }
 .card{
+    width: 300px;
     background-color: #ffffff0a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 30px 20px;
+    padding: 2em 2em;
     border-radius: 20px;
-    gap: 20px;
+    gap: 2em;
 }
 
 .card h3{
-    font-size: 1vw;
+    font-size: 1.5em;
     font-family: "Montserrat",serif;
 }
 
 .card p{
-    font-size: 0.7vw;
+    font-size: 1.2em;
+    font-weight: 300;
     font-family: "Montserrat",serif;
 }
 .first img{
@@ -788,11 +873,6 @@ form.envioformulario::before{
     box-shadow: 3px 3px 5px #00FF11;
 }
 
-
-.card p{
-    line-height: 25px;
-    font-weight: lighter;
-}
 
 
 
@@ -830,10 +910,10 @@ form.envioformulario::before{
     #principal-container{
         max-width: 90%;
     }
-    
     .navbar img{
-        width: 22vw;
+        width: 35vw;
     }
+    
     #open{
         width: 10vw;
     }
@@ -845,7 +925,7 @@ form.envioformulario::before{
         display: block;
     }
     .navbar{
-        margin-top: 3%;
+        margin-top: 2rem;
     }
     nav{
         opacity: 0;
@@ -859,7 +939,8 @@ form.envioformulario::before{
         padding: 1rem;
         justify-content: start !important;
         align-items: end !important;
-        background-color: #9743FF;
+        background-color: #9843ff65;
+        backdrop-filter: blur(10px);
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         gap: 10px;
     }
@@ -873,12 +954,12 @@ form.envioformulario::before{
     .total-list{
         display: flex;
         flex-direction: column;
-        ul{
-            display: flex;
+    }
+    .total-list ul{
+        display: flex;
             flex-direction: column;
             align-items: end;   
             gap: 10px;
-        }
     }
     .total-list a{
         font-size: 4vw;
@@ -886,15 +967,11 @@ form.envioformulario::before{
     .get-in-touch{
         padding: 5px 12px;
         display: flex;
-        background-color: #9743FF;
-        
-    }
-    .get-in-touch:hover{
-        color: #000E37;
+        background-color: #9843ff;
     }
     .get-in-touch a{
         font-size: 4vw;
-
+        color: #000E37;
     } 
 
 
@@ -936,6 +1013,27 @@ form.envioformulario::before{
 
 
     /* Testimonials Mobile */
+
+
+    .testimonials {
+        margin-top: 30px;
+        -webkit-mask:linear-gradient(
+            90deg,
+            transparent,
+            white 1%,
+            white 99%,
+            transparent
+        );
+        mask: linear-gradient(
+            90deg,
+            transparent,
+            white 1%,
+            white 99%,
+            transparent
+        );
+    }
+
+
     .carousel-container{
         margin: 5vh 0;
     }
@@ -943,18 +1041,21 @@ form.envioformulario::before{
         font-size: 8vw;
     }
     .carousel-container span{
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     .testimonial-card h6 {
         margin: 10px 0 0;
-        font-size: 14px;
+        font-size: 4vw;
         
     }
-    
+    .client-detail img{
+        width: 15vw !important;
+        
+    }
     .testimonial-card p {
         font-size: 3vw;
-        margin: 2px 0;
+        
     }
 
 
@@ -966,13 +1067,7 @@ form.envioformulario::before{
         margin: 20px 0px;
     }
 
-    .list-footer{
-        margin: 10px 0px;
-        ul{
-            font-size: 12px;
-        }
-    }
-
+    
     .logo1{
         width: 10vw;
     }
@@ -1069,8 +1164,9 @@ form.envioformulario::before{
     }
     
     .card-container{
+        margin: 4rem 0;
         flex-direction: column;
-
+        gap: 2rem;
     }
 
 
@@ -1086,6 +1182,12 @@ form.envioformulario::before{
         margin: 5vh 0;
     }
     
+
+
+    .card{
+        width: 90%;
+        margin: auto;
+    }
     .card h3{
         font-size: 4vw;
     }
@@ -1385,9 +1487,7 @@ form.envioformulario::before{
         max-width: 60%;
     }
 
-    .main-container{
-        margin-top: 12vh;
-    }
+    
 
 
     .hero h1{
@@ -1405,7 +1505,7 @@ form.envioformulario::before{
 
 
     .box{
-        height: 4vh;
+        height: 3.5rem;
     }
 
 
@@ -1430,11 +1530,8 @@ form.envioformulario::before{
         margin-top: 4vh;
         font-size: 2vw;
     }   
-    .card-container{
-        margin-top: 4vh;
-        display: flex;
-        justify-content: space-between;
-        gap: 12vw;
+    .card{
+        width: 350px;
     }
 
 }

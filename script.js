@@ -32,11 +32,25 @@ async function handlesubmit(event){
     let regexPhone = /^\+?\d+$/g
 
     if(!regexEmail.test(email)){
-        alert("Please enter a valid email address.")
+        
+        Toastify({
+            text: "Please enter a valid email address.",
+            className: "warning",
+            style: {
+              background: "red",
+            }
+          }).showToast();
         return false
     }
     if(!regexPhone.test(phone)){
-        alert("Please enter a valid number without dashes or spaces. The area code is optional.")
+        // alert("Please enter a valid number without dashes or spaces. The area code is optional.")
+        Toastify({
+            text: "Please enter a valid number without dashes or spaces. The area code is optional.",
+            className: "warning",
+            style: {
+              background: "red",
+            }
+          }).showToast();
         return false
     }
     const form = new FormData(this)
@@ -55,8 +69,13 @@ async function handlesubmit(event){
         // setTimeout(()=>{
         //     event.target.classList.remove("envioformulario");
         // },5000)
-
-        alert("Thank you for reaching out. I will get back to you shortly.")
+        Toastify({
+            text: "Thank you for reaching out. I will get back to you shortly.",
+            className: "success",
+            style: {
+              background: "green",
+            }
+          }).showToast();
     }
 }
 
@@ -85,3 +104,38 @@ close.addEventListener("click",()=>{
     
     nav.classList.remove("visible");
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+const scrollers = document.querySelectorAll(".scroller");
+
+if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    addAnimation()
+}
+
+
+function addAnimation(){
+    scrollers.forEach(scroller=>{
+        scroller.setAttribute("data-animated",true);
+        
+        const scrollerInner = scroller.querySelector(".scroller-inner")
+        const scrollerContent = Array.from(scrollerInner.children)
+
+        scrollerContent.forEach(item =>{
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden",true)
+            scrollerInner.appendChild(duplicatedItem)
+        })
+
+    })
+}
