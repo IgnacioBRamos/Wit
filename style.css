@@ -139,12 +139,11 @@ body {
     font-size: 2.5vw;
     font-weight: bold;
     margin-bottom: 10px;
-
-    span {
-        background: linear-gradient(to right, #FF6600, #DE0AFF);
+}
+.hero h1 span{
+    background: linear-gradient(to right, #FF6600, #DE0AFF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
 }
 
 
@@ -160,12 +159,7 @@ body {
 
 }
 
-#truearrow {
-    display: none;
-    justify-content: center;
-    position: absolute;
 
-}
 
 .hero {
     display: flex;
@@ -467,11 +461,6 @@ form.envioformulario::before{
     }
 }
 
-.partners {
-    /* display: flex;
-    align-items: center;
-    gap: 10px; */
-}
 
 
 
@@ -948,7 +937,7 @@ form.envioformulario::before{
     .visible{
         opacity: 1;
         visibility: visible;
-        z-index: 1;
+        z-index: 3;
     }
     
     .total-list{
