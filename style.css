@@ -398,7 +398,7 @@ form.envioformulario::before{
 /* Footer */
 
 
-.scroller{
+/* .scroller{
     max-width: 600px;
     outline: 1px solid green;
 }
@@ -427,7 +427,7 @@ form.envioformulario::before{
     to{
         transform: translate(calc(-50% - 1.5rem));
     }
-}
+} */
 
 
 
@@ -897,7 +897,8 @@ form.envioformulario::before{
         justify-content: start !important;
         align-items: end !important;
         background-color: #9843ff65;
-        /* backdrop-filter: blur(10px); */
+        -webkit-backdrop-filter: blur(10px); /* Para Safari */
+        backdrop-filter: blur(10px); /* Para Chrome en Android */
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         gap: 10px;
     }
