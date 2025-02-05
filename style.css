@@ -313,8 +313,7 @@ form.envioformulario::before{
     gap: 1rem;
 }
 
-.testimonial-card img {
-    
+.testimonial-card img {   
     border-radius: 50%;
 }
 
@@ -387,37 +386,6 @@ form.envioformulario::before{
 .firm span{
     font-size: 12px;
 }
-
-/* Estilo para los botones de navegación */
-/* .owl-nav button {
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: #555;
-    cursor: pointer;
-}
-
-.owl-nav button:hover {
-    color: #000;
-} */
-
-
-
-
-
-
-
-/* End Testimonial */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -894,7 +862,7 @@ form.envioformulario::before{
 
 
 
-@media only screen and (max-width: 480px){
+@media screen and (max-width: 480px){
 
     #principal-container{
         max-width: 90%;
@@ -929,7 +897,7 @@ form.envioformulario::before{
         justify-content: start !important;
         align-items: end !important;
         background-color: #9843ff65;
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         gap: 10px;
     }
@@ -937,7 +905,7 @@ form.envioformulario::before{
     .visible{
         opacity: 1;
         visibility: visible;
-        z-index: 3;
+        z-index: 1;
     }
     
     .total-list{
@@ -1000,7 +968,7 @@ form.envioformulario::before{
     /* Testimonials Mobile */
 
 
-    .testimonials {
+    /* .testimonials {
         margin-top: 30px;
         -webkit-mask:linear-gradient(
             90deg,
@@ -1016,7 +984,7 @@ form.envioformulario::before{
             white 99%,
             transparent
         );
-    }
+    } */
 
 
     .carousel-container{
@@ -1031,16 +999,13 @@ form.envioformulario::before{
 
     .testimonial-card h6 {
         margin: 10px 0 0;
-        font-size: 4vw;
-        
+        font-size: 4vw;       
     }
     .client-detail img{
-        width: 15vw !important;
-        
+        width: 15vw !important;     
     }
     .testimonial-card p {
-        font-size: 3vw;
-        
+        font-size: 3vw;      
     }
 
 
