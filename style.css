@@ -398,9 +398,9 @@ form.envioformulario::before{
 /* Footer */
 
 
-/* .scroller{
+.scroller{
     max-width: 600px;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
 }
 .scroller-inner{
     padding-block: 1rem;
@@ -427,7 +427,7 @@ form.envioformulario::before{
     to{
         transform: translate(calc(-50% - 1.5rem));
     }
-} */
+}
 
 
 
