@@ -5,7 +5,7 @@ const detailHome = document.querySelector(".detail-home");
 const detailWeb = document.querySelector(".detail-web");
 
 let interval; // Identificador del intervalo
-let currentIndex = 0; // Índice global
+let currentIndex = 1; // Índice global
 let firstCycle = true; // Bandera para controlar la primera vuelta
 
 
@@ -129,7 +129,7 @@ function switchSection(section, xTranslate) {
 
     // Activa la sección seleccionada
     section.style.opacity = 1;
-    section.style.zIndex = 4;
+    section.style.zIndex = 2;
 
     
 
@@ -141,6 +141,11 @@ function switchSection(section, xTranslate) {
 
     const texto = section.querySelectorAll(".detail-description p");
     texto.forEach(parrafo => (parrafo.style.opacity = 0)); // Oculta todos los textos
+    if(firstCycle){
+        texto[0].style.opacity = 1;
+    }
+    
+
 
     const queries = [
         {
@@ -196,13 +201,13 @@ function switchSection(section, xTranslate) {
 
 
                 if (section == detailBusiness) {
-                    cuadro.style.width = "12vw"
+                    cuadro.style.width = "14vw"
                 } else if (section == detailHome) {
                     cuadro.style.left = `${(xTranslate) }vw`
                     cuadro.style.width = "12vw"
                 } else {
-                    cuadro.style.left = `${(xTranslate) + 1}vw`
-                    cuadro.style.width = "11vw";
+                    cuadro.style.left = `${(xTranslate)}vw`
+                    cuadro.style.width = "12vw";
                 }
 
                 console.log('Pantalla extra grande: min-width 1441px');

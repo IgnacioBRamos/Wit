@@ -21,6 +21,10 @@
     font-weight: bold;
 }
 
+:root{
+    --fs-xl: clamp(2.5rem, 2.1739rem + 1.6304vw, 3.4375rem);
+}
+
 body {
     background-color: #000E37;
     background-image: url(images/backroundiamge.svg);
@@ -126,7 +130,7 @@ body {
 
 /*  Main */
 .main-container {
-    margin-top: 6vh;
+    margin-top: 4.5vh;
     flex: 1;
 }
 
@@ -403,7 +407,7 @@ form.envioformulario::before{
     /* outline: 1px solid green; */
 }
 .scroller-inner{
-    padding-block: 1rem;
+    padding-block: 0.5rem;
     display: flex;
     gap: 3rem;
 }
@@ -445,11 +449,11 @@ form.envioformulario::before{
     height: auto;
 }
 .logo2{
-    width: 3rem;
+    width: 2.5rem;
     height: auto;
 }
 .logo3{
-    width: 8rem;
+    width: 6rem;
     height: auto;
 }
 
@@ -534,8 +538,8 @@ form.envioformulario::before{
 
 
 .services-title{
-    margin: 5rem 0 8rem;
-    font-size: 3rem;
+    margin: 1rem 0;
+    font-size: var(--fs-xl);
     font-weight: 900;
 }
 
@@ -577,7 +581,6 @@ form.envioformulario::before{
     background-color: #9843ff21;
     border-radius: 10px 10px 0px 0px;
     transition: 1s;
-    
 }
 
 
@@ -779,12 +782,12 @@ form.envioformulario::before{
 
 
 .card-container{
-    margin-top: 2vh;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-around;
 }
 .card{
-    width: 300px;
+    width: 400px;
     background-color: #ffffff0a;
     display: flex;
     flex-direction: column;
@@ -793,17 +796,17 @@ form.envioformulario::before{
     text-align: center;
     padding: 2em 2em;
     border-radius: 20px;
-    gap: 2em;
+    gap: 1rem;
 }
 
 .card h3{
-    font-size: 1.5em;
+    font-size: 1.3rem;
     font-family: "Montserrat",serif;
 }
 
 .card p{
-    font-size: 1.2em;
-    font-weight: 300;
+    font-size: 0.9rem;
+    font-weight: 400;
     font-family: "Montserrat",serif;
 }
 .first img{
@@ -817,7 +820,6 @@ form.envioformulario::before{
 }
 
 .first{
-    margin-left: 3px;
     box-shadow: -3px 3px 5px #9743FF;
 }
 
@@ -906,7 +908,7 @@ form.envioformulario::before{
     .visible{
         opacity: 1;
         visibility: visible;
-        z-index: 1;
+        z-index: 3;
     }
     
     .total-list{
@@ -1057,9 +1059,7 @@ form.envioformulario::before{
     #secondary-container{
         max-width: 95% ;
     }
-    .services-container{
-        margin-top: 10vh;
-    }
+    
     
     .detail-items{
         min-width: 41vw !important;
@@ -1092,7 +1092,9 @@ form.envioformulario::before{
     .business,.home,.web{
         font-size: 2.5vw;
     }
-
+    .item{
+        gap: 1px;
+    }
     .item img{
         width: 4vw;
         margin-right: 2px;
