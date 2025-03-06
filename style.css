@@ -22,7 +22,20 @@
 }
 
 :root{
-    --fs-xl: clamp(2.5rem, 2.1739rem + 1.6304vw, 3.4375rem);
+    --fs-xl: clamp(1.875rem, 1.625rem + 1.25vw, 3.125rem);
+    --fs-500: clamp(0.875rem, 0.8184rem + 0.283vw, 1.25rem);
+    --fs-100: clamp(0.625rem, 0.5873rem + 0.1887vw, 0.875rem);
+
+    --step--2: clamp(0.7813rem, 0.7422rem + 0.1953vw, 1.04rem);
+    --step--1: clamp(0.9375rem, 0.8828rem + 0.2736vw, 1.3rem);
+    --step-0: clamp(1.125rem, 1.0495rem + 0.3774vw, 1.625rem);
+    --step-1: clamp(1.35rem, 1.2472rem + 0.5142vw, 2.0313rem);
+    --step-2: clamp(1.62rem, 1.4813rem + 0.6936vw, 2.5391rem);
+    --step-3: clamp(1.944rem, 1.7584rem + 0.9282vw, 3.1738rem);
+    --step-4: clamp(2.3328rem, 2.0861rem + 1.2336vw, 3.9673rem);
+    --step-5: clamp(2.7994rem, 2.4734rem + 1.63vw, 4.9591rem);
+
+
 }
 
 body {
@@ -46,16 +59,17 @@ body {
 
 
 /* Navbar section*/
+
 .navbar {
     display: flex;
     justify-content: space-between;
     /* Divide los elementos a los extremos */
     align-items: center;
-    margin-top: 2%;
+    margin-top: 2rem;
 }
 
 .navbar img {
-    width: 8vw;
+    width: 14rem;
     height: auto;
     /* Ajusta el tamaño de la imagen */
 }
@@ -82,11 +96,13 @@ body {
     transition: color 0.3s ease;
 }
 
-
+.total-list{
+    position: relative;
+}
 .total-list a{
     color: white;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: var(--step-0) !important;
     font-weight: normal;
     transition: color 0.5s;     
 }
@@ -94,9 +110,11 @@ body {
     color: #26FF8F;
 }
 
+
 .get-in-touch {
-    padding: 0.4vw 1vw;
-    font-weight: 700;
+    position: relative;
+    padding: 0.4rem 1rem;
+    font-weight: 700 !important;
     background-color: #000E37;
     border: 2px solid #26FF8F;
     box-shadow: 2px 2px 2px #00D0FF;
@@ -111,18 +129,13 @@ body {
 }
 
 
-
-
-
-/* header img {
-    width: 100px;
-} */
-
-
 .open-menu,.close-menu{
     width: 9vw;
     display: none;
 }
+
+
+
 /* Fin Navbar section*/
 
 
@@ -130,17 +143,20 @@ body {
 
 /*  Main */
 .main-container {
-    margin-top: 4.5vh;
+    margin-top: 4rem;
     flex: 1;
 }
-
-
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
 .hero-title{
     width: 50%;
 }
 .hero h1 {
     color: white;
-    font-size: 2.5vw;
+    font-size: var(--fs-xl);
+    /* font-size: 2.5vw; */
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -150,25 +166,18 @@ body {
         -webkit-text-fill-color: transparent;
 }
 
-
-
-
 .hero h3 {
-    font-size: 18px;
+    font-size: var(--fs-500);
     color: white;
-    line-height: 2.5rem;
-    font-weight: 600;
+    line-height: 2.5;
+    font-weight: 500;
     max-width: 60ch;
     font-family: "Montserrat",serif;
-
 }
 
 
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 
 /* Form */
@@ -258,14 +267,12 @@ form.envioformulario::before{
 
 
 
+.brands-carousel{
+    width: 25rem !important;
+    margin: 0 auto;
+    overflow: hidden;
 
 
-/* TESTIMONIALS */
-
-
-
-.testimonials {
-    margin-top: 30px;
     -webkit-mask:linear-gradient(
         90deg,
         transparent,
@@ -280,21 +287,78 @@ form.envioformulario::before{
         white 80%,
         transparent
     );
+   
+}
+
+
+.first-slide-slide{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    
+}
+.first-slide-slide h2{
+    font-size: var(--step--1);
+}
+
+.first-slide{
+    width: 100% !important;
+    
+    /* background-color: #00FF11; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+/*
+.second-slide{
+    background-color: #9743FF;
+} */
+
+
+
+
+
+
+
+/* TESTIMONIALS */
+
+
+
+.testimonials {
+    margin-top: 30px;
+    -webkit-mask:linear-gradient(
+        90deg,
+        transparent,
+        white 1%,
+        white 99%,
+        transparent
+    );
+    mask: linear-gradient(
+        90deg,
+        transparent,
+        white 1%,
+        white 99%,
+        transparent
+    );
 }
 
 
 
-/* .carousel-container {
-    
-} */
+.carousel-container {
+    margin-top: 5rem;
+}
 
 .carousel-container h2 {
-    font-size: 2rem;
+    font-size: var(--step-1);
 }
 
 /* Estilos de las tarjetas */
 .testimonial-card {
-    
+    margin: 0 auto;
+    width: 90%;
     position: relative;
     box-sizing: border-box;
     padding: 30px;
@@ -312,7 +376,7 @@ form.envioformulario::before{
     /* Centra los elementos horizontalmente */
     justify-content: center;
     /* Centra los elementos verticalmente */
-    height: 200px;
+    
     /* Asegura que todos los elementos estén centrados */
     gap: 1rem;
 }
@@ -326,27 +390,22 @@ form.envioformulario::before{
     display: flex;
     flex-direction: row;  
     align-items: center;
-    
-    width: 80%;
+    justify-content: center;
 }
 
-
-
 .testimonial-card h6 {
-    font-size: 16px;
+    font-size: var(--step--2);
     font-weight: bold;
     color: white;
 }
 
 .testimonial-card p {
-    font-size: 12px;
+    font-size: var(--fs-100);
     text-align: center;
     font-family: "Montserrat",serif;
     color: #fff;
-
+    z-index: 2;
 }
-
-
 
 .testimonial-card::before {
     color: #ffffff;
@@ -358,7 +417,7 @@ form.envioformulario::before{
     height: 50px;
     top: -10px;
     left: -10px;
-    z-index: 2;
+    z-index: 1;
     background-color: #000E37;
 }
 
@@ -373,7 +432,7 @@ form.envioformulario::before{
     height: 50px;
     right: -10px;
     bottom: -10px;
-    z-index: 2;
+    z-index: 1;
     background-color: #000E37;
 }
 
@@ -395,16 +454,11 @@ form.envioformulario::before{
 
 
 
-
-
-
-
 /* Footer */
 
-
+/*
 .scroller{
-    max-width: 600px;
-    /* outline: 1px solid green; */
+    max-width: 900px;
 }
 .scroller-inner{
     padding-block: 0.5rem;
@@ -431,9 +485,9 @@ form.envioformulario::before{
     to{
         transform: translate(calc(-50% - 1.5rem));
     }
-}
+} 
 
-
+*/
 
 
 .footer-container{
@@ -443,22 +497,18 @@ form.envioformulario::before{
     margin: 20px 0px 0px 0px;
 }
 
-
+.logo{
+    width: 6rem !important;
+}
 .logo1{
-    width: 4rem;
-    height: auto;
-}
-.logo2{
-    width: 2.5rem;
-    height: auto;
-}
-.logo3{
-    width: 6rem;
-    height: auto;
+    width: 3rem !important;
 }
 
 
-
+.client-support{
+    text-decoration: none;
+    color: white;
+}
 
 .copyright{
     margin-top: 1.5vh;
@@ -530,6 +580,7 @@ form.envioformulario::before{
     box-sizing: border-box;
     font-family: "Archia",sans-serif;
     min-height: 100vh;
+    min-height: 100svh;
     overflow: hidden;
     position: relative;
 }
@@ -869,12 +920,12 @@ form.envioformulario::before{
     #principal-container{
         max-width: 90%;
     }
-    .navbar img{
-        width: 35vw;
-    }
     
+    .navbar a img{
+        width: 10rem;
+    }
     #open{
-        width: 10vw;
+        width: 2.5rem;
     }
     #close{
         width: 8vw;
@@ -891,7 +942,7 @@ form.envioformulario::before{
         visibility: hidden;      
     }
     nav{
-        position: absolute;
+        position: absolute !important;
         top: 0;
         right: 0;
         bottom: 0;
@@ -946,11 +997,10 @@ form.envioformulario::before{
         
     }
     .hero h1{
-        font-size: 10vw;
         width: 100%;
     }
     .hero h3{
-        font-size: 4.5vw;
+        line-height: 2;
     }
     form{
         width: 100%;
@@ -961,10 +1011,15 @@ form.envioformulario::before{
         width: 98%;
         font-size: 6vw;
     }
+    
 
     form textarea{
         height: 70px;
         font-size: 6vw;
+    }
+    form input[type=submit]{
+        padding: 5px 1px;
+        font-size: 16px;
     }
     
 
@@ -989,17 +1044,33 @@ form.envioformulario::before{
         );
     } */
 
+    .brands-carousel{
+        width: 100% !important;
+    }
+    .first-slide-slide{
+        margin-top: 3rem;
+        text-align: start !important;
+    }
+
+
+
+
+
+
+
 
     .carousel-container{
         margin: 5vh 0;
     }
-    .carousel-container h2{
-        font-size: 8vw;
-    }
+
+    
     .carousel-container span{
         font-size: 3vw;
     }
 
+    .testimonial-card{
+        height: 170px;
+    }
     .testimonial-card h6 {
         margin: 10px 0 0;
         font-size: 4vw;       
@@ -1007,9 +1078,7 @@ form.envioformulario::before{
     .client-detail img{
         width: 15vw !important;     
     }
-    .testimonial-card p {
-        font-size: 3vw;      
-    }
+    
 
 
     /* END Testimonials Mobile */
@@ -1077,17 +1146,16 @@ form.envioformulario::before{
     }
 
     .detail-container{
-        height: 380px;
+        height: 330px;
     }
 
     .box{
-        
-        height: 4.5vh;
+        height: 2em;
     }
 
     .services{
         padding-top: 7px;
-        margin-bottom: 13px;
+        margin-bottom: 16px;
     }
     .business,.home,.web{
         font-size: 2.5vw;
@@ -1182,32 +1250,21 @@ form.envioformulario::before{
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     
-    .navbar img {
-        width: 10vw;
-        /* Ajusta el tamaño de la imagen */
+    
+    #principal-container{
+        max-width: 80%;
     }
-    .total-list a{
-        color: white;
-        text-decoration: none;
-        font-size: 1.5vw;
-    }
-    .get-in-touch {
-        padding: 0.6vw 1.9vw;
-        color: white;
-        font-weight: 700;
-        background-color: #000E37;
-        border: 2px solid #26FF8F;
-        box-shadow: 2px 2px 2px #00D0FF;
-        border-radius: 10px;
+    .hero{
+        flex-direction: column;
     }
     .hero-title{
-        width: 54%;
+        width: 100%;
     }
-    .hero h1{
-        font-size: 4.2vw;       
+    .navbar a img{
+        width: 8rem;
     }
-    .hero h3{
-        font-size: 1.7vw;
+    .total-list a{
+        font-size: var(--step--2);
     }
 
     form{
@@ -1222,26 +1279,28 @@ form.envioformulario::before{
         height: 40px;
     }
 
-    #truearrow{
-        display: none;
-    }
+    
     .carousel-container{
         margin-top: 2vh;
     }
-    .carousel-container h2{
-        font-size: 3.5vw;
-    }
-    .carousel-container span{
-        font-size: 2vw;
-    }
+    
+    
 
 
+    .client-detail{
+        width: 100%;
+    }
     .testimonial-card{
-        height: 170px;
+        max-width: 70%;
     }
     .testimonial-card p{
-        font-size: 1.3vw;
         margin-bottom: 5px;
+    }
+    .client-detail img{
+        width: 3rem !important;
+    }
+    .firm{
+        margin-left: 10px;
     }
 
     .logo1{
@@ -1329,36 +1388,18 @@ form.envioformulario::before{
 }
 
 @media screen and (min-width: 769px) and (max-width: 1440px) {
-    .navbar img {
-        width: 7vw;
-        /* Ajusta el tamaño de la imagen */
+    #principal-container{
+        max-width: 80%;
     }
-    .total-list a{
-        color: white;
-        text-decoration: none;
-        font-size: 1vw;
-    }
-    .get-in-touch {
-        padding: 0.4vw 1.2vw;
-        color: white;
-        font-weight: 700;
-        background-color: #000E37;
-        border: 2px solid #26FF8F;
-        box-shadow: 2px 2px 2px #00D0FF;
-        border-radius: 10px;
     
+    .navbar a img{
+        width: 10rem;
     }
 
-    .hero h1{
-        font-size: 3.2vw;       
-    }
-    .hero h3{
-        font-size: 1vw;
-    }
 
     form{
         width: 35%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     form input[type=text]{
         padding: 1px 1px;
@@ -1367,34 +1408,31 @@ form.envioformulario::before{
     form textarea{
         height: 50px;
     }
-
-    #truearrow{
-        display: none;
+    form input[type=submit]{
+        padding: 0.25rem;
+        font-size: 1rem;
     }
+
+    
     .carousel-container{
         margin-top: 2vh;
     }
-    .carousel-container h2{
-        font-size: 2.5vw;
-    }
+    
     .carousel-container span{
         font-size: 1vw;
     }
 
 
     .testimonial-card{
-        height: 170px;
+        height: 200px;
     }
-    .testimonial-card p{
-        font-size: 0.8vw;
-        margin-bottom: 10px;
-    }
+    
 
     .business,.home,.web{
         font-size: 1vw;
     }
-    .item img{
-        width: 1.5vw;
+    .client-detail img{
+        width: 3rem !important;
         margin-right: 5px;
     }
 
@@ -1425,10 +1463,14 @@ form.envioformulario::before{
     }
     .about p{
         font-size: 1.3vw;
+        line-height: 1.8rem;
     }
 
     section h2{
         margin: 5vh 0;
+    }
+    .card{
+        padding: 1rem 1rem;
     }
     .card-container{
         gap: 5vw;
@@ -1449,23 +1491,20 @@ form.envioformulario::before{
     #principal-container{
         max-width: 60%;
     }
-
-    
-
-
-    .hero h1{
-        font-size: 2.5vw;       
-    }
     .carousel-container{
         margin-top: 5rem;
     }
 
-
+    .carousel-container h2{
+        margin-bottom: 6rem;
+    }
 
     #secondary-container{
         max-width: 60%;
     }
-
+    .services-title{
+        margin: 5rem 0rem;
+    }
 
     .box{
         height: 3.5rem;
@@ -1490,7 +1529,7 @@ form.envioformulario::before{
     }
     
     section h2{
-        margin-top: 4vh;
+        margin: 4rem 0;
         font-size: 2vw;
     }   
     .card{
