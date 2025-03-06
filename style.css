@@ -299,7 +299,8 @@ form.envioformulario::before{
     
 }
 .first-slide-slide h2{
-    font-size: var(--step--1);
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .first-slide{
@@ -1048,7 +1049,11 @@ form.envioformulario::before{
         width: 100% !important;
     }
     .first-slide-slide{
+        gap: 4rem;
+    }
+    .first-slide-slide h2{
         margin-top: 3rem;
+        font-size: 1.3rem;
         text-align: start !important;
     }
 
