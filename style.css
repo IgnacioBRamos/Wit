@@ -1096,14 +1096,14 @@ form.envioformulario::before{
 
 
 
-    .scroller{
+    /* .scroller{
         max-width: 90%;
         outline: 1px solid rgba(0, 128, 0, 0.055);
     }
 
     .scroller-inner{
         gap: 1rem;
-    }
+    } */
     
     .logo1{
         width: 10vw;
