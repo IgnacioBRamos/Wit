@@ -69,7 +69,7 @@ body {
 }
 
 .navbar img {
-    width: 14rem;
+    width: 13.5rem;
     height: auto;
     /* Ajusta el tamaño de la imagen */
 }
@@ -375,7 +375,7 @@ form.envioformulario::before{
     /* Apila los elementos verticalmente */
     align-items: center;
     /* Centra los elementos horizontalmente */
-    justify-content: center;
+    
     /* Centra los elementos verticalmente */
     
     /* Asegura que todos los elementos estén centrados */
@@ -590,7 +590,7 @@ form.envioformulario::before{
 
 
 .services-title{
-    margin: 1rem 0;
+    margin: 2rem 0;
     font-size: var(--fs-xl);
     font-weight: 900;
 }
@@ -923,7 +923,7 @@ form.envioformulario::before{
     }
     
     .navbar a img{
-        width: 10rem;
+        width: 8rem;
     }
     #open{
         width: 2.5rem;
@@ -1054,7 +1054,6 @@ form.envioformulario::before{
     .first-slide-slide h2{
         margin-top: 3rem;
         font-size: 1.3rem;
-        text-align: start !important;
     }
 
 
@@ -1073,15 +1072,11 @@ form.envioformulario::before{
         font-size: 3vw;
     }
 
-    .testimonial-card{
-        height: 170px;
-    }
     .testimonial-card h6 {
-        margin: 10px 0 0;
         font-size: 4vw;       
     }
     .client-detail img{
-        width: 15vw !important;     
+        width: 3.5rem !important;     
     }
     
 
@@ -1161,6 +1156,9 @@ form.envioformulario::before{
     .services{
         padding-top: 7px;
         margin-bottom: 16px;
+    }
+    .services-title{
+        margin: 2rem 0;
     }
     .business,.home,.web{
         font-size: 2.5vw;
