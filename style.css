@@ -359,7 +359,7 @@ form.envioformulario::before{
 /* Estilos de las tarjetas */
 .testimonial-card {
     margin: 0 auto;
-    width: 90%;
+    width: 50%;
     position: relative;
     box-sizing: border-box;
     padding: 30px;
@@ -439,7 +439,6 @@ form.envioformulario::before{
 
 
 .firm{
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1072,6 +1071,9 @@ form.envioformulario::before{
         font-size: 3vw;
     }
 
+    .testimonial-card{
+        width: 90%;
+    }
     .testimonial-card h6 {
         font-size: 4vw;       
     }
@@ -1293,7 +1295,7 @@ form.envioformulario::before{
         width: 100%;
     }
     .testimonial-card{
-        max-width: 70%;
+        width: 70%;
     }
     .testimonial-card p{
         margin-bottom: 5px;

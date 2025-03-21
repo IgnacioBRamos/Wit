@@ -2,16 +2,14 @@ $(document).ready(function(){
     $('.testimonials').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 10000,
-        autoplaySpeed: 5000,
-        slideBy: 1,   
-        margin: 15, /* Espacio entre los elementos */
-        responsive: {
-            0: { items: 1 },
-            700: { items: 2 },
-            1440: { items: 3 }
-        }
+        autoplayTimeout: 5000,
+        autoplaySpeed: 1000,
+        items: 1, // Mostrar solo un ítem a la vez
+        animateOut: 'animate__animated animate__flipOutX', // Agregar animación de salida
+        animateIn: 'animate__animated animate__flipInX',   // Agregar animación de entrada
+        margin: 15
     });
+    
 });
 
 $(document).ready(function(){
