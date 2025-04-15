@@ -143,12 +143,12 @@ body {
 
 /*  Main */
 .main-container {
-    margin-top: 4rem;
     flex: 1;
 }
 .hero {
     display: flex;
     justify-content: space-between;
+    padding: 2rem 0;
 }
 .hero-title{
     width: 50%;
@@ -158,7 +158,7 @@ body {
     font-size: var(--fs-xl);
     /* font-size: 2.5vw; */
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 }
 .hero h1 span{
     background: linear-gradient(to right, #FF6600, #DE0AFF);
@@ -348,24 +348,20 @@ form.envioformulario::before{
 
 
 
-.carousel-container {
-    margin-top: 5rem;
-}
-
 .carousel-container h2 {
     font-size: var(--step-1);
 }
 
 /* Estilos de las tarjetas */
 .testimonial-card {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 50%;
     position: relative;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 40px;
     /* Padding interno */
     background-color: #000E37;
-    border: 1px solid rgba(255, 255, 255, 0.644);
+    border: 1px solid #FFAEFF;
     border-radius: 50px;
     text-align: center;
     /* Centra el contenido */
@@ -397,7 +393,7 @@ form.envioformulario::before{
 .testimonial-card h6 {
     font-size: var(--step--2);
     font-weight: bold;
-    color: white;
+    color: #FFAEFF;
 }
 
 .testimonial-card p {
@@ -420,6 +416,9 @@ form.envioformulario::before{
     left: -10px;
     z-index: 1;
     background-color: #000E37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -429,12 +428,15 @@ form.envioformulario::before{
     content: '\f10e';
     font-size: 40px;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    right: -10px;
-    bottom: -10px;
+    width: 65px;
+    height: 65px;
+    right: -20px;
+    bottom: -20px;
     z-index: 1;
     background-color: #000E37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -453,41 +455,6 @@ form.envioformulario::before{
 
 
 
-
-/* Footer */
-
-/*
-.scroller{
-    max-width: 900px;
-}
-.scroller-inner{
-    padding-block: 0.5rem;
-    display: flex;
-    gap: 3rem;
-}
-
-
-.scroller[data-animated="true"]{
-    overflow: hidden;
-    -webkit-mask: linear-gradient(90deg,transparent, white 20%, white 80%,transparent);
-    mask: linear-gradient(90deg,transparent, white 20%, white 80%,transparent);
-}
-
-.scroller[data-animated="true"] .scroller-inner{
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: scroll 20s linear infinite;
-    
-}
-
-
-@keyframes scroll{
-    to{
-        transform: translate(calc(-50% - 1.5rem));
-    }
-} 
-
-*/
 
 
 .footer-container{
@@ -752,7 +719,7 @@ form.envioformulario::before{
 
 .detail-description p{
     position: absolute;
-    padding: 20px;
+    padding: 0px 15px 0px 15px;
     opacity: 0;
     transition: opacity 2s;
 }
@@ -809,6 +776,7 @@ form.envioformulario::before{
 .about{
     display: flex;
     justify-content: space-between;
+    padding: 2rem 0;
 }
 
 .about div{
@@ -1176,8 +1144,7 @@ form.envioformulario::before{
         width: 50%;
     }
 
-    .detail-description{
-        
+    .detail-description{    
         width: 50%;
     }
     .texto{
@@ -1495,9 +1462,10 @@ form.envioformulario::before{
     #principal-container{
         max-width: 60%;
     }
-    .carousel-container{
-        margin-top: 5rem;
+    .hero{
+        padding: 7rem 0;
     }
+    
 
     .carousel-container h2{
         margin-bottom: 6rem;
@@ -1521,7 +1489,9 @@ form.envioformulario::before{
 
 
 
-
+    .about{
+        padding: 7rem 0;
+    }
     .about span{
         font-size: 3vw;
     

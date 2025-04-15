@@ -120,12 +120,24 @@ function itemsClickable(section) {
 
 function switchSection(section, xTranslate) {
     // Restablece todas las secciones
-    detailHome.style.opacity = 0;
-    detailHome.style.zIndex = 0;
-    detailWeb.style.opacity = 0;
-    detailWeb.style.zIndex = 0;
-    detailBusiness.style.opacity = 0;
-    detailBusiness.style.zIndex = 0;
+    if(section == detailBusiness){
+        detailHome.style.opacity = 0;
+        detailHome.style.zIndex = 0;
+        detailWeb.style.opacity = 0;
+        detailWeb.style.zIndex = 0;
+    }else if(section == detailWeb){
+        detailHome.style.opacity = 0;
+        detailHome.style.zIndex = 0;
+        detailBusiness.style.opacity = 0;
+        detailBusiness.style.zIndex = 0;
+    }else{
+        detailWeb.style.opacity = 0;
+        detailWeb.style.zIndex = 0;
+        detailBusiness.style.opacity = 0;
+        detailBusiness.style.zIndex = 0;
+    }
+    
+    
 
     // Activa la sección seleccionada
     section.style.opacity = 1;
