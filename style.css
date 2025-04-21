@@ -1014,8 +1014,12 @@ form input[type=submit]:hover{
 
 
 
+    /* FOOTER */
+    .copyright{
+        font-size: 1.25rem;
+    }
 
-
+    /* END FOOTER */
 
 
 
@@ -1042,11 +1046,7 @@ form input[type=submit]:hover{
 
     /* END Testimonials Mobile */
 
-    .footer-container{
-        display: flex;
-        flex-direction: column;
-        margin: 20px 0px;
-    }
+   
 
 
 
@@ -1068,14 +1068,7 @@ form input[type=submit]:hover{
     .logo3{
         width: 21vw;
     }
-
-    .footer-container{
-        font-size: 4vw;
-    }
     
-    .list-footer ul{
-        font-size: 3.4vw;
-    }
 
 
 
