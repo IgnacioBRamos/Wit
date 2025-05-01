@@ -213,13 +213,14 @@ function switchSection(section, xTranslate) {
 
 
                 if (section == detailBusiness) {
-                    cuadro.style.width = "14vw"
+                    cuadro.style.left = `${(xTranslate) + 7}vw`
+                    cuadro.style.width = "18vw"
                 } else if (section == detailHome) {
-                    cuadro.style.left = `${(xTranslate) }vw`
-                    cuadro.style.width = "12vw"
+                    cuadro.style.left = `${(xTranslate) -3 }vw`
+                    cuadro.style.width = "18vw"
                 } else {
-                    cuadro.style.left = `${(xTranslate)}vw`
-                    cuadro.style.width = "12vw";
+                    cuadro.style.left = `${(xTranslate)-10.5}vw`
+                    cuadro.style.width = "15.5vw";
                 }
 
                 console.log('Pantalla extra grande: min-width 1441px');

@@ -50,7 +50,7 @@ body {
     flex-direction: column;
     max-width: 70%;
     margin: 0 auto;
-    font-family: "Archia",sans-serif;
+    font-family: "Archia",sans-serif !important;
     min-height: 100vh;
     /* overflow: hidden; */
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .navbar img {
-    width: 13.5rem;
+    width: 11rem;
     height: auto;
     /* Ajusta el tamaño de la imagen */
 }
@@ -148,15 +148,14 @@ body {
 .hero {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 .hero-title{
     width: 50%;
 }
 .hero h1 {
     color: white;
-    font-size: var(--fs-xl);
-    /* font-size: 2.5vw; */
+    font-size: var(--step-2);
     font-weight: bold;
     margin-bottom: 2rem;
 }
@@ -167,7 +166,7 @@ body {
 }
 
 .hero h3 {
-    font-size: var(--fs-500);
+    font-size: var(--step--2);
     color: white;
     line-height: 2.5;
     font-weight: 500;
@@ -183,7 +182,6 @@ body {
 /* Form */
 form {
     margin-right: 5px;
-    margin-top: 1rem;
     width: 400px;
     font-family: "Montserrat",serif;
     position: relative;
@@ -324,11 +322,12 @@ form input[type=submit]:hover{
 
 .carousel-container h2 {
     font-size: var(--step-1);
+    text-align: center;
 }
 
 /* Estilos de las tarjetas */
 .testimonial-card {
-    margin: 30px auto;
+    margin: 10px auto 0px;
     width: 50%;
     position: relative;
     box-sizing: border-box;
@@ -534,16 +533,16 @@ form input[type=submit]:hover{
 
 
 .services-title{
-    margin: 2rem 0;
-    font-size: var(--fs-xl);
-    font-weight: 900;
+    margin: 4rem 0 2rem;
+    font-size: var(--step-2);
+    font-weight: bold;
 }
 
-.services-title span{
+/* .services-title span{
     background: linear-gradient(to right, #FF6600, #DE0AFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 
 
@@ -554,21 +553,23 @@ form input[type=submit]:hover{
 
 
 .services {
-    width: 95%;
+    width: 70%;
     margin: 0 auto;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
 }
 
 .business,.home,.web{
-    font-size: 0.8vw;
+    font-size: var(--fs-500);
 }
-
+.business h3,.home h3{
+    padding-top: 1px;
+}
 
 .box {
     position: absolute;
@@ -598,8 +599,9 @@ form input[type=submit]:hover{
 .detail-container {
     background-color: #9843ff21; 
     border-radius: 10px;
-    width: 100%;
-    height: 500px;
+    margin: auto;
+    width: 80%;
+    height: 400px;
     position: relative;
     /* display: flex;
     align-items: center; */
@@ -667,19 +669,21 @@ form input[type=submit]:hover{
 
 .detail-items li{
     cursor: pointer;
-    background-color: #ff6600c9;
+    background-color: #ff660021;
     list-style: none;
     padding: 10px;
     border-radius: 30px;
     transition: 2s;
-    color: white;
+    color: rgba(255, 255, 255, 0.24);
 }
 
 
 .active-item{
     background-color: #ff6600 !important;
+    color: rgb(255, 255, 255)!important;
+    font-weight: bold;
     transform: scale(1.1, 1.1);
-    box-shadow: 0px 5px 5px 1px #000000;
+    box-shadow: 0px 2px 2px 1px #00000050;
 }
 
 
@@ -712,7 +716,7 @@ form input[type=submit]:hover{
     color: white;
     opacity: 1;
     transition: 1s;
-    line-height: 3;
+    line-height: 2.5;
     font-weight: 600;
     font-family: "Montserrat";
 }
@@ -754,15 +758,18 @@ form input[type=submit]:hover{
 .about{
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 4rem 0 0rem;
 }
 
 .about div{
     width: 50%;
 }
-
+.about h1{
+    font-size: var(--step-2); 
+    padding-bottom: 2rem;  
+    font-weight: bold;
+}
 .about span{
-    font-size: 3vw;
     font-weight: bold;
     margin-bottom: 10px;
     background: linear-gradient(to right, #FF6600, #DE0AFF);
@@ -771,13 +778,18 @@ form input[type=submit]:hover{
 }
 
 .about p{
-    font-size: 1vw;
-    line-height: 2;
+    max-width: 60ch;
+    font-size: var(--step--2);
+    line-height: 3;
     font-weight: 600;    
     font-family: "Montserrat",serif;
 }
 
-
+.card-title{
+    font-size: var(--step-1);
+    font-weight: bold;
+    padding: 1rem 0;
+}
 .card-container{
     margin: 1rem 0;
     display: flex;
@@ -797,12 +809,12 @@ form input[type=submit]:hover{
 }
 
 .card h3{
-    font-size: 1.3rem;
+    font-size: var(--step-0);
     font-family: "Montserrat",serif;
 }
 
 .card p{
-    font-size: 0.9rem;
+    font-size: var(--fs-100);
     font-weight: 400;
     font-family: "Montserrat",serif;
 }
@@ -930,7 +942,7 @@ form input[type=submit]:hover{
             gap: 20px;
     }
     .total-list a{
-        font-size: 4vw;
+        
     }
     .get-in-touch{
         padding: 5px 12px;
@@ -938,7 +950,6 @@ form input[type=submit]:hover{
         background-color: #9843ff;
     }
     .get-in-touch a{
-        font-size: 4vw;
         color: #000E37;
     } 
 
@@ -966,17 +977,14 @@ form input[type=submit]:hover{
     form input[type=text]{
         padding: 5px 1px;
         width: 98%;
-        font-size: 6vw;
     }
     
 
     form textarea{
         height: 70px;
-        font-size: 6vw;
     }
     form input[type=submit]{
         padding: 5px 1px;
-        font-size: 16px;
     }
     
 
@@ -1009,15 +1017,9 @@ form input[type=submit]:hover{
     }
     .first-slide-slide h2{
         margin-top: 3rem;
-        font-size: 1.3rem;
     }
 
 
-
-    /* FOOTER */
-    .copyright{
-        font-size: 1.25rem;
-    }
 
     /* END FOOTER */
 
@@ -1028,15 +1030,10 @@ form input[type=submit]:hover{
     }
 
     
-    .carousel-container span{
-        font-size: 3vw;
-    }
+    
 
     .testimonial-card{
         width: 90%;
-    }
-    .testimonial-card h6 {
-        font-size: 4vw;       
     }
     .client-detail img{
         width: 3.5rem !important;     
@@ -1083,14 +1080,12 @@ form input[type=submit]:hover{
     
     
     .detail-items{
-        min-width: 41vw !important;
-        margin: 10px 4px;
+        
         margin-left: 13px;
-        gap: 15px;
+        gap: 1rem;
     }
     
     .detail-items li{
-        font-size: 2.5vw;
         padding: 5px 14px;
         border-radius: 30px;
         transition: 2s;
@@ -1098,6 +1093,7 @@ form input[type=submit]:hover{
 
     .detail-container{
         height: 330px;
+        width: 100%;
     }
 
     .box{
@@ -1105,14 +1101,11 @@ form input[type=submit]:hover{
     }
 
     .services{
-        padding-top: 7px;
+        width: 95%;
         margin-bottom: 12px;
     }
     .services-title{
         margin: 3rem 0;
-    }
-    .business,.home,.web{
-        font-size: 2.5vw;
     }
     .item{
         gap: 1px;
@@ -1130,7 +1123,6 @@ form input[type=submit]:hover{
         width: 50%;
     }
     .texto{
-        font-size: 2.4vw;
         line-height: 1rem;
     }
     
@@ -1154,14 +1146,6 @@ form input[type=submit]:hover{
     }
 
 
-    
-    .about span{
-        font-size: 11vw;
-    }
-    .about p{
-        font-size: 4vw;
-    }
-
     section h2{
         margin: 5vh 0;
     }
@@ -1172,11 +1156,7 @@ form input[type=submit]:hover{
         width: 90%;
         margin: auto;
     }
-    .card h3{
-        font-size: 4vw;
-    }
     .card p{
-        font-size: 4vw;
         width: 80%;
     }
     .first img{
@@ -1282,9 +1262,6 @@ form input[type=submit]:hover{
         padding-top: 7px;
         margin-bottom: 12px;
     }
-    .business,.home,.web{
-        font-size: 1.5vw;
-    }
     .item img{
         width: 3vw;
         margin-right: 5px;
@@ -1295,9 +1272,6 @@ form input[type=submit]:hover{
 
     .detail-items{
         min-width: 23vw;
-    }
-    .detail-items li{
-        font-size: 1.4vw;
     }
 
 
@@ -1310,18 +1284,13 @@ form input[type=submit]:hover{
         width: 50%;
     }
     .texto{
-        font-size: 1.8vw;
-        line-height: 1.5rem;
+        line-height: 1.5;
     }
 
 
 
     /* PAGINA 3 */
     .about span{
-        font-size: 5vw;
-    }
-    .about p{
-        font-size: 1.7vw;
     }
 
     section h2{
@@ -1329,12 +1298,6 @@ form input[type=submit]:hover{
     }
     .card-container{
         gap: 1vw;
-    }
-    .card h3{
-        font-size: 1.4vw;
-    }
-    .card p{
-        font-size: 1.4vw;
     }
 
 
@@ -1352,7 +1315,6 @@ form input[type=submit]:hover{
 
     form{
         width: 35%;
-        font-size: 0.7rem;
     }
     form input[type=text]{
         padding: 1px 1px;
@@ -1363,7 +1325,6 @@ form input[type=submit]:hover{
     }
     form input[type=submit]{
         padding: 0.25rem;
-        font-size: 1rem;
     }
 
     
@@ -1371,9 +1332,6 @@ form input[type=submit]:hover{
         margin-top: 2vh;
     }
     
-    .carousel-container span{
-        font-size: 1vw;
-    }
 
 
     .testimonial-card{
@@ -1381,9 +1339,7 @@ form input[type=submit]:hover{
     }
     
 
-    .business,.home,.web{
-        font-size: 1vw;
-    }
+
     .client-detail img{
         width: 3rem !important;
         margin-right: 5px;
@@ -1399,24 +1355,15 @@ form input[type=submit]:hover{
     .detail-items{
         min-width: 16vw;
     }
-    .detail-items li{
-        font-size: 1vw;
-    }
-
-    .detail-description{
-        font-size: 1.2vw;
-    }
+    
 
 
 
     /* PAGINA 3 */
 
-    .about span{
-        font-size: 4vw;
-    }
+    
     .about p{
-        font-size: 1.3vw;
-        line-height: 1.8rem;
+        line-height: 1.8;
     }
 
     section h2{
@@ -1427,12 +1374,6 @@ form input[type=submit]:hover{
     }
     .card-container{
         gap: 5vw;
-    }
-    .card h3{
-        font-size: 1.4vw;
-    }
-    .card p{
-        font-size: 1vw;
     }
 
 }
@@ -1483,19 +1424,13 @@ form input[type=submit]:hover{
     .about{
         padding: 7rem 0;
     }
-    .about span{
-        font-size: 3vw;
     
-    }
     
-    .about p{
-        font-size: 0.8vw;    
-       
-    }
+    
     
     section h2{
         margin: 4rem 0;
-        font-size: 2vw;
+       
     }   
     .card{
         width: 350px;
