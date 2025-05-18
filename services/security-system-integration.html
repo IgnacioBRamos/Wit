@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-container">
+
+        <header>
+                <img src="../images/brand/wit.svg" alt="LOGO WIT" class="brand" width="200px">
+                <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+                    <img src="../images/icon-services/menu-icon.svg" alt="hamburguer icon to open the sidebar">
+                </button>
+                <nav id="navbar">     
+                    <ul>
+                        <li>
+                            <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                                <img src="../images/icon-services/close-icon.svg" alt="cross icon to close the sidebar">
+                            </button>
+                        </li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#" class="header-contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+            </header>
+        <main>
+            <h1>Security system integration</h1>
+            <div>
+                <p>Security is an essential priority for any business, but managing it with multiple systems can be overwhelming. WIT Solutions Group provides comprehensive protection and peace of mind. Our approach not only safeguards your assets, employees, and sensitive information but also enables you to manage risks more effectively, all while reducing overhead costs and administrative burdens.</p>
+                <ul>
+                    <li>Centralized integration of surveillance, alarms, and access control</li>
+                    <li>Professional installation with optimal camera and sensor placement</li>
+                    <li>Support for future upgrades, saving you time and money down the road.</li>
+                    <li>Whether you're setting up a new office or upgrading an existing network, we provide the foundation you can count on.Contact us today for a free consultation and bring order to your connectivity.</li>
+                </ul>
+            </div>
+            <a href="../form.html">Reach us</a>
+
+
+
+            <section class="steps-service">
+                <div>
+                    <img src="../images/icon-steps/form.svg" alt="">
+                    <p class="steps-service__title">1.Fill out the contact form</p>
+                    <p>Start by filling out our simple contact form. Share your details and describe the issue you’re experiencing so we can better understand your needs.</p>
+                </div>
+                <div>
+                    <img src="../images/icon-steps/chat-bubble.svg" alt="">
+                    <p class="steps-service__title">1.Fill out the contact form</p>
+                    <p>Start by filling out our simple contact form. Share your details and describe the issue you’re experiencing so we can better understand your needs.</p>
+                </div>
+                <div>
+                    <img src="../images/icon-steps/online-support.svg"  alt="">
+                    <p class="steps-service__title">1.Fill out the contact form</p>
+                    <p>Start by filling out our simple contact form. Share your details and describe the issue you’re experiencing so we can better understand your needs.</p>
+                </div>
+
+            </section>
+
+
+
+        </main>
+        <footer class="footer">
+                <div class="footer-about">
+                    <p>Who is WIT?</p>
+                    <p>WIT Solutions Group sets the new standard for Managed Service Providers. WIT is a company where innovation meets precision on an ever-evolving digital landscape. We consider that businesses require more than just an "IT Guy", they need a partner that can help them grow every mile on the way to success.</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <p>Business services</p>
+                        <ul>
+                            <li><a href="#">Network asessment</a></li>
+                            <li><a href="#">Structured cabling</a></li>
+                            <li><a href="#">Security system integration</a></li>
+                            <li><a href="#">Backup & Recovery</a></li>
+                            <li><a href="#">Project management</a></li>
+                            <li><a href="#">Multimedia meeting room</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Residential services</p>
+                        <ul>
+                            <li><a href="#">Entertaiment</a></li>
+                            <li><a href="#">Microsoft & Apple support</a></li>
+                            <li><a href="#">Mesh WIFI</a></li>
+                            <li><a href="#">Security cameras</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="" class="footer-contact">Get in Touch</a>
+                
+            </footer>
+            <hr>
+            <p class="copyright">© 2025 WIT Solutions Group. All rights reserved. · About WIT · Privacy Policy </p>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
