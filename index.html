@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="main-container">
-        <header>
-            <img src="images/brand/wit.svg" alt="LOGO WIT" class="brand" width="200px">
-            <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
-                <img src="images/icon-services/menu-icon.svg" alt="hamburguer icon to open the sidebar">
-            </button>
-            <nav id="navbar">     
-                <ul>
-                    <li>
-                        <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-                            <img src="images/icon-services/close-icon.svg" alt="cross icon to close the sidebar">
-                        </button>
+        <header class="nav-container">
+
+            <div class="nav-logo">
+                <a href=""><img src="images/brand/wit.svg" alt=""></a>
+            </div>
+            <i class="ri-menu-line open-menu"></i>
+            <div class="overlay"></div>
+            <nav class="nav-links-container">
+                <i class="ri-close-line close-menu"></i>
+                <ul class="nav-links">
+                    <li class="nav-link-item"><a href="">Who no se que</a></li>
+                    <li class="nav-link-item dropdown-menu-branch">
+                        <a href="#" data-toggle="dropdown-menu">Business Service<i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu-item"><a href="">Network asessment</a></li>
+                                <li class="dropdown-menu-item"><a href="">Network asessment</a></li>
+                            </ul>
                     </li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="#" class="header-contact">Contact</a></li>
+                    <li class="nav-link-item"><a href="">Residential Service<i class="ri-arrow-down-s-line"></i></a></li>
+                    <li class="nav-link-item"><a href="">Contact</a></li>
                 </ul>
             </nav>
-            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </header>
         
          
@@ -41,6 +46,20 @@
             </div>
         
         </section>
+        <div class="scroller">
+            <div class="scroller__inner">
+                <img src="images/logos/dialpad.svg" alt="">
+                <img src="images/logos/DW.svg" alt="">
+                <img src="images/logos/logoDell.svg" alt="">
+                <img src="images/logos/logoFirewalla.svg" alt="">
+                <img src="images/logos/logoLenovo.svg" alt="">
+                <img src="images/logos/logoReolink.svg" alt="">
+                <img src="images/logos/logoUnify.svg" alt="">
+                <img src="images/logos/pdk.svg " alt="">
+                <img src="images/logos/t-mobile.svg" alt="">
+
+            </div>
+        </div>
         <section class="services-section">
             <h2>Our Services</h2>
             <p class="service-subtitle">Business services</p>
@@ -164,6 +183,6 @@
 
 
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
