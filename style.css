@@ -58,7 +58,6 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
 }
 
 
@@ -180,14 +179,11 @@ img{
 
 
 @media screen and (max-width: 992px){
-    .nav-container{
-        padding: 0 3rem;
-    }
     .nav-container .nav-links-container{
-        position: absolute;
-        right: -400px;
+        position: fixed;
+        right: -300px;
         visibility: hidden; 
-        width: 400px;
+        width: 300px;
         height: 100%;
         top: 0;
         overflow-y: auto;
