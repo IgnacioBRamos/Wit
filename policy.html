@@ -4,24 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/ZorroWit.svg">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/ZorroWit.svg">
     <title>Privacy Policy | Wit Solutions Group</title>
 </head>
 
 <body>
-    <div id="principal-container">
+    <div id="main-container">
 
-        <header class="navbar">
-            <a href="/WIT"><img src="images/wit.svg" alt="Logo"></a>
-            <img id="open" class="open-menu" src="images/menuIcon.svg" alt="burger icon to open the menu">
-    
-            <nav id="nav" class="total-list ">
-                <img id="close" class="close-menu" src="images/crossIcon.svg" alt="cross icon to close the menu">
-                <ul class="list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html" class="get-in-touch">Get in touch</a></li>
+        <header class="nav-container">
+
+            <div class="nav-logo">
+                <a href="./index.html"><img src="./images/brand/wit.svg" alt=""></a>
+            </div>
+            <i class="ri-menu-line open-menu"></i>
+            <div class="overlay"></div>
+            <nav class="nav-links-container">
+                <i class="ri-close-line close-menu"></i>
+                <ul class="nav-links">
+                    <li class="nav-link-item"><a href="./whyUs.html">Why choose us</a></li>
+                    <li class="nav-link-item dropdown-menu-branch">
+                        <a href="#" data-toggle="dropdown-menu">Business Service<i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu-item"><a href="./services/network-asessment.html">Network asessment</a></li>
+                                <li class="dropdown-menu-item"><a href="./services/structure-cabling.html">Structure Cabling</a></li>
+                                <li class="dropdown-menu-item"><a href="./services/security-system-integration.html">Security System Integration</a></li>
+                                <li class="dropdown-menu-item"><a href="./services/backup-recovery.html">Backup & Recovery</a></li>
+                                <li class="dropdown-menu-item"><a href="./services/project-management.html">Project Management</a></li>
+                                <li class="dropdown-menu-item"><a href="./services/multimedia-meeting-room.html">Multimedia Meeting Room</a></li>
+                            </ul>
+                    </li>
+                    <li class="nav-link-item dropdown-menu-branch">
+                        <a href="#" data-toggle="dropdown-menu">Residential Service<i class="ri-arrow-down-s-line"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a href="./services/entertaiment.html">Entertaiment</a></li>
+                            <li class="dropdown-menu-item"><a href="./services/microsoft-apple-support.html">Microsoft & Apple Support</a></li>
+                            <li class="dropdown-menu-item"><a href="./services/mesh-wifi.html">Mesh WIFI</a></li>
+                            <li class="dropdown-menu-item"><a href="./services/security-camera.html">Security Cameras</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link-item"><a href="./form.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -76,7 +99,7 @@
                 <li>Withdraw your consent to our use of your data at any time</li>
             </ul>
             <p>To exercise these rights, please contact us at: <br>
-                📧 <a href="mailto:support@witsolutionsgroup.com">support@witsolutionsgroup.com</a></p>
+            <a href="mailto:support@witsolutionsgroup.com">support@witsolutionsgroup.com</a></p>
         
             <h2>6. Third-Party Links</h2>
             <p>Our site includes a link to TeamViewer.com, a third-party tool for remote support. We are not responsible for the
@@ -88,14 +111,39 @@
                 date.</p>
         </main>
     
-        <footer>
-            <div class="copyright">
-                <h6>© 2025 WIT Solutions Group · <a href="#" class="client-support">Client support</a> · <a href="#"
-                        class="client-support">Privacy policy</a> ·</h6>
-    
-                <h6>© This website is powered by WIT digital </h6>
+        <footer class="footer">
+            <div class="footer-about">
+                <p>Who is WIT?</p>
+                <p>WIT Solutions Group sets the new standard for Managed Service Providers. WIT is a company where innovation meets precision on an ever-evolving digital landscape. We consider that businesses require more than just an "IT Guy", they need a partner that can help them grow every mile on the way to success.</p>
             </div>
+            <div class="footer-links">
+                <div>
+                    <p>Business services</p>
+                    <ul>
+                        <li><a href="services/network-asessment.html">Network asessment</a></li>
+                        <li><a href="services/structure-cabling.html">Structured cabling</a></li>
+                        <li><a href="services/security-system-integration.html">Security system integration</a></li>
+                        <li><a href="services/backup-recovery.html">Backup & Recovery</a></li>
+                        <li><a href="services/project-management.html">Project management</a></li>
+                        <li><a href="services/multimedia-meeting-room.html">Multimedia meeting room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Residential services</p>
+                    <ul>
+                        <li><a href="services/entertaiment.html">Entertaiment</a></li>
+                        <li><a href="services/microsoft-apple-support.html">Microsoft & Apple support</a></li>
+                        <li><a href="services/mesh-wifi.html">Mesh WIFI</a></li>
+                        <li><a href="services/security-camera.html">Security cameras</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="" class="footer-contact">Get in Touch</a>
+            
         </footer>
+        <hr>
+        <p class="copyright">© 2025 WIT Solutions Group. · <a href="./policy.html">Privacy Policy </a></p>
+        <p class="copyright">© This website is powered by WIT digital</p>
     </div>
     <script src="script3.js"></script>
 </body>

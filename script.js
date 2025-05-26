@@ -84,3 +84,59 @@ function addAnimation() {
 
 
 })();
+
+
+
+
+
+
+
+const form = document.getElementById("formulario")
+
+form.addEventListener("submit", handlesubmit)
+
+async function handlesubmit(event) {
+    event.preventDefault()
+    let email = document.getElementById("email").value
+    let phone = document.getElementById("phone").value
+    let checkbox = document.getElementById("privacy").checked
+    let checkboxError = document.getElementById("checkbox-error")
+    let emailError = document.getElementById("email-error")
+    let phoneError = document.getElementById("phone-error")
+
+
+    let regexEmail = /[\w.-]+@[\w]+\.\w{2,}/g
+    let regexPhone = /^\+?\d+$/g
+
+    if (!regexEmail.test(email)) {
+        emailError.style.display = "block"
+        return false
+    }
+    if (!regexPhone.test(phone)) {
+          phoneError.style.display = "block"
+          return false
+    }
+    if (!checkbox) {
+        checkboxError.style.display = "block"
+        return false
+    }
+    const form = new FormData(this)
+
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers: {
+            "accept": "application/json"
+        }
+    })
+    if (response.ok) {
+        this.reset()
+        alert("Thank you for reaching out. I will get back to you shortly.")
+    }
+    else{
+      alert("Something went wrong. Please try again.")
+    }
+    emailError.style.display = "none"
+    phoneError.style.display = "none"
+    checkboxError.style.display = "none"
+}

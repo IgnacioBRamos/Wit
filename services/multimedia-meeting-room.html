@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
     <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="main-container">
 
-        <header>
-                <img src="../images/brand/wit.svg" alt="LOGO WIT" class="brand" width="200px">
-                <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
-                    <img src="../images/icon-services/menu-icon.svg" alt="hamburguer icon to open the sidebar">
-                </button>
-                <nav id="navbar">     
-                    <ul>
-                        <li>
-                            <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-                                <img src="../images/icon-services/close-icon.svg" alt="cross icon to close the sidebar">
-                            </button>
-                        </li>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#" class="header-contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-            </header>
+        <header class="nav-container">
+
+            <div class="nav-logo">
+                <a href="../index.html"><img src="../images/brand/wit.svg" alt=""></a>
+            </div>
+            <i class="ri-menu-line open-menu"></i>
+            <div class="overlay"></div>
+            <nav class="nav-links-container">
+                <i class="ri-close-line close-menu"></i>
+                <ul class="nav-links">
+                    <li class="nav-link-item"><a href="../whyUs.html">Why choose us</a></li>
+                    <li class="nav-link-item dropdown-menu-branch">
+                        <a href="#" data-toggle="dropdown-menu">Business Service<i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu-item"><a href="./network-asessment.html">Network asessment</a></li>
+                                <li class="dropdown-menu-item"><a href="./structure-cabling.html">Structure Cabling</a></li>
+                                <li class="dropdown-menu-item"><a href="./security-system-integration.html">Security System Integration</a></li>
+                                <li class="dropdown-menu-item"><a href="./backup-recovery.html">Backup & Recovery</a></li>
+                                <li class="dropdown-menu-item"><a href="./project-management.html">Project Management</a></li>
+                                <li class="dropdown-menu-item"><a href="./multimedia-meeting-room.html">Multimedia Meeting Room</a></li>
+                            </ul>
+                    </li>
+                    <li class="nav-link-item dropdown-menu-branch">
+                        <a href="#" data-toggle="dropdown-menu">Residential Service<i class="ri-arrow-down-s-line"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a href="./entertaiment.html">Entertaiment</a></li>
+                            <li class="dropdown-menu-item"><a href="./microsoft-apple-support.html">Microsoft & Apple Support</a></li>
+                            <li class="dropdown-menu-item"><a href="./mesh-wifi.html">Mesh WIFI</a></li>
+                            <li class="dropdown-menu-item"><a href="./security-camera.html">Security Cameras</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link-item"><a href="../form.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <main>
             <h1>Multimedia meeting room</h1>
             <div>
                 <p>In today’s fast-paced business world, meetings are the cornerstone of collaboration and decision-making. But let’s face it—technical issues, outdated equipment, and cluttered setups waste valuable time and create unnecessary frustration.
 WIT Solutions Group specializes in installing state-of-the-art systems tailored to your business needs, ensuring your conference room works as efficiently as you do.</p>
+                <p>What do we offer?</p>
+                <ul>
+                    <li>High-quality audio and video systems</li>
+                    <li>Smart conference room solutions</li>
+                    <li>Customized setups for your business</li>
+                </ul>
                 
             </div>
             <a href="../form.html">Reach us</a>
@@ -47,13 +70,14 @@ WIT Solutions Group specializes in installing state-of-the-art systems tailored 
                 </div>
                 <div>
                     <img src="../images/icon-steps/chat-bubble.svg" alt="">
-                    <p class="steps-service__title">1.Fill out the contact form</p>
-                    <p>Start by filling out our simple contact form. Share your details and describe the issue you’re experiencing so we can better understand your needs.</p>
+                    <p class="steps-service__title">2.We contact you</p>
+                    <p>Once we receive your form, a member of our team will contact you promptly. We’ll discuss your problem in detail and explain how we can help.</p>
                 </div>
                 <div>
                     <img src="../images/icon-steps/online-support.svg"  alt="">
-                    <p class="steps-service__title">1.Fill out the contact form</p>
-                    <p>Start by filling out our simple contact form. Share your details and describe the issue you’re experiencing so we can better understand your needs.</p>
+                    <p class="steps-service__title">3.Implementation and Support</p>
+                    <p>We implement the customized solutions and provide continuous monitoring and support to ensure optimal performance and address
+                        any issues promptly.</p>
                 </div>
 
             </section>
@@ -70,21 +94,21 @@ WIT Solutions Group specializes in installing state-of-the-art systems tailored 
                     <div>
                         <p>Business services</p>
                         <ul>
-                            <li><a href="#">Network asessment</a></li>
-                            <li><a href="#">Structured cabling</a></li>
-                            <li><a href="#">Security system integration</a></li>
-                            <li><a href="#">Backup & Recovery</a></li>
-                            <li><a href="#">Project management</a></li>
-                            <li><a href="#">Multimedia meeting room</a></li>
+                            <li><a href="./network-asessment.html">Network asessment</a></li>
+                            <li><a href="./structure-cabling.html">Structured cabling</a></li>
+                            <li><a href="./security-system-integration.html">Security system integration</a></li>
+                            <li><a href="./backup-recovery.html">Backup & Recovery</a></li>
+                            <li><a href="./project-management.html">Project management</a></li>
+                            <li><a href="./multimedia-meeting-room.html">Multimedia meeting room</a></li>
                         </ul>
                     </div>
                     <div>
                         <p>Residential services</p>
                         <ul>
-                            <li><a href="#">Entertaiment</a></li>
-                            <li><a href="#">Microsoft & Apple support</a></li>
-                            <li><a href="#">Mesh WIFI</a></li>
-                            <li><a href="#">Security cameras</a></li>
+                            <li><a href="./entertaiment.html">Entertaiment</a></li>
+                            <li><a href="./microsoft-apple-support.html">Microsoft & Apple support</a></li>
+                            <li><a href="./mesh-wifi.html">Mesh WIFI</a></li>
+                            <li><a href="./security-camera.html">Security cameras</a></li>
                         </ul>
                     </div>
                 </div>
@@ -92,7 +116,8 @@ WIT Solutions Group specializes in installing state-of-the-art systems tailored 
                 
             </footer>
             <hr>
-            <p class="copyright">© 2025 WIT Solutions Group. All rights reserved. · About WIT · Privacy Policy </p>
+            <p class="copyright">© 2025 WIT Solutions Group. · <a href="../policy.html">Privacy Policy </a></p>
+            <p class="copyright">© This website is powered by WIT digital</p>
     </div>
     <script src="../script.js"></script>
 </body>
