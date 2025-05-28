@@ -326,13 +326,13 @@ img{
 .hero-section .hero-text h1{
     font-size: var(--step-4);
 }
-/*
+
 .hero-section .hero-text h1 span{
     background: linear-gradient(to right, #FF6600, #DE0AFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-*/    
+
 .hero-section .hero-text p{
     max-width: 60ch;
     margin: 2rem 0 5rem 0;
@@ -423,11 +423,10 @@ img{
 
 
 .services-section span{
-    /*
+    
     background: linear-gradient(to right, #FF6600, #DE0AFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    */
     font-size: var(--step-3);
     font-weight: 900;
     margin: 2rem 0rem;
