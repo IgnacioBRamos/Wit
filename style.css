@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Archia",sans-serif !important;
+    font-family: "Archia",sans-serif;
 }
 
 :root {
@@ -57,7 +57,7 @@ img{
 
 
 #main-container{
-    max-width: 70%;
+    max-width: 85%;
     margin: 0 auto;
     color: #ECEAEB;
 }    
@@ -68,11 +68,24 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    */
 }
+/*
+.nav-container.scrolled {
+    background-color: #0D1A40;
+    transition: background-color 0.3s ease;
+}
+*/
+
+
 
 
 .nav-logo{
-    width: 120px;
+    width: 180px;
     padding: 1rem 0;
 }
 
@@ -313,9 +326,16 @@ img{
 .hero-section .hero-text h1{
     font-size: var(--step-4);
 }
+.hero-section .hero-text h1 span{
+    background: linear-gradient(to right, #FF6600, #DE0AFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .hero-section .hero-text p{
     max-width: 60ch;
     margin: 2rem 0 5rem 0;
+    font-family: "Montserrat",sans-serif;
 }
 
 
@@ -401,17 +421,30 @@ img{
 
 
 
+.services-section span{
+    background: linear-gradient(to right, #FF6600, #DE0AFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: var(--step-3);
+    font-weight: 900;
+    margin: 2rem 0rem;
+}
 
-
+/*
 .services-section h2{
+    background: linear-gradient(to right, #FF6600, #DE0AFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     font-size: var(--step-3);
     margin: 2rem 0rem;
 }
+   */ 
 .services-section .service-subtitle{
     font-size: var(--step-2);
     margin: 2rem 0rem;
-    border-bottom: 2px solid #FF6600;
-    display: inline-block;
+    color: #9743FF;
+    display: block;
 }
 
 
@@ -428,6 +461,7 @@ img{
 .business-cards .card{
     display: flex;
     flex-direction: column;
+    height: 100%;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);
     background-color: var(--color-surface);
@@ -443,14 +477,51 @@ img{
 
 .card-title{
     font-size: var(--step-2);
+    font-family: "Archia",sans-serif !important;
 }
 
 .business-cards .card p{
-    max-width: 50ch;
+    max-width: 40ch;
+    font-family: "Montserrat",sans-serif;
 }
 
 
+.probando{
+    padding: 0.5rem;
+    background-color: #9743FF;
+    border-radius: 50%;
+    fill: #ECEAEB;
+    transition: 0.3s background-color ease, fill 0.3s ease;
+}
+.business-cards .card:hover .probando{
+    fill: #9743FF;
+    background-color: #ECEAEB;
+}
 
+.residential-cards .card:hover .probando{
+    fill: #9743FF;
+    background-color: #ECEAEB;
+}
+
+
+.probando1{
+    padding: 0.5rem;
+    background-color: #9743FF;
+    border-radius: 50%;
+    stroke: #ECEAEB;
+    transition: 0.3s background-color ease, stroke 0.3s ease;
+}
+
+
+.business-cards .card:hover .probando1{
+    stroke: #9743FF;
+    background-color: #ECEAEB;
+}
+
+.residential-cards .card:hover .probando1{
+    stroke: #9743FF;
+    background-color: #ECEAEB;
+}
 
 
 
@@ -471,6 +542,7 @@ img{
     background-color: #0D1A40;
     border-radius: 15px;
     transition: 0.3s background-color ease;
+    height: 100%;
 }
 
 .residential-cards .card:hover{
@@ -479,7 +551,8 @@ img{
 
 
 .residential-cards .card p{
-    max-width: 50ch;
+    max-width: 40ch;
+    font-family: "Montserrat",sans-serif;
 }
 
 
@@ -695,22 +768,64 @@ form input[type=submit]:hover{
 
 
 
+@media screen  and (min-width: 1880px){
+    #main-container{
+        max-width: 75%;
+    }
+    .business-cards .card p{
+        max-width: 45ch;
+    }
+    .residential-cards .card p{
+        max-width: 45ch;
+    }
+}
 
 
 
-
-
+@media screen  and (max-width: 1440px) {
+    #main-container{
+        max-width: 70%;
+    }
+    
+    .hero-section .hero-img{
+        display: none;
+    }
+    .hero-section .hero-text{
+        max-width: 100%;
+        margin: 3rem 0;
+    }
+    .business-cards .card p{
+        max-width: 35ch;
+    }
+    .residential-cards .card p{
+        max-width: 35ch;
+    }
+    .policy-container{
+        align-items: start;
+    }
+}
+@media screen  and (max-width: 1150px){
+    #main-container{
+        max-width: 85%;
+    }
+}
 
 
 @media screen and (max-width: 768px) {
     #main-container{
-        max-width: 90%;
+        max-width: 90% !important;
     }
 
     .steps-service div{
         padding: 1rem;
     }
 
+    .business-cards .card p{
+        max-width: 50ch;
+    }
+    .residential-cards .card p{
+        max-width: 50ch;
+    }
     .footer{
         gap: 2rem;
         justify-content: flex-start;
@@ -720,18 +835,3 @@ form input[type=submit]:hover{
 
 
 
-@media screen  and (max-width: 1440px) {
-    .hero-section .hero-img{
-        display: none;
-    }
-    .hero-section .hero-text{
-        max-width: 100%;
-        margin: 3rem 0;
-    }
-    .business-cards .card p{
-        max-width: 45ch;
-    }
-    .policy-container{
-        align-items: start;
-    }
-}

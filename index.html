@@ -6,6 +6,9 @@
     <meta name="description" content="Professional Managed IT Service Provider offering IT consulting services, business IT solutions, web design, and technical assistance to optimize your technology needs.">
     <meta name="keywords" content="Technology,IT,web design,help technology,Managed IT Service Provider,IT consulting services,business IT,IT for Business,IT solutions,technical assistance,business technology services,startup business">
     <meta name="author" content="WIT Solutions Group">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="style.css">
@@ -15,7 +18,6 @@
 <body>
     <div id="main-container">
         <header class="nav-container">
-
             <div class="nav-logo">
                 <a href="./index.html"><img src="images/brand/wit.svg" alt=""></a>
             </div>
@@ -53,7 +55,7 @@
          
         <section class="hero-section">
             <div class="hero-text">
-                <h1>Premium IT solutions for your technology needs.</h1>
+                <h1><span>Premium IT</span> solutions for your technology needs.</h1>
                 <p>At WIT Solutions Group, we combine innovation and precision to deliver tailored technology services that grow with your business. More than support — we're in it for the long run.</p>
                 <a href="form.html">Let's get started</a>
             </div>
@@ -77,12 +79,12 @@
             </div>
         </div>
         <section class="services-section">
-            <h2>Our Services</h2>
+            <span>Our Services</span>
             <p class="service-subtitle">Business services</p>
             <div class="business-cards">
                 <a href="services/network-asessment.html">
                     <div class="card">
-                        <img src="images/icon-services/Wi-Fi Connected.svg" alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M317-160q-8 0-15-4t-11-11l-84-150h71l42 80h90v-30h-72l-42-80H191l-63-110q-2-4-3-7.5t-1-7.5q0-2 4-15l63-110h105l42-80h72v-30h-90l-42 80h-71l84-150q4-7 11-11t15-4h118q13 0 21.5 8.5T465-770v175h-85l-30 30h115v130h-98l-39-80h-98l-30 30h108l40 80h117v215q0 13-8.5 21.5T435-160H317Zm208 0q-13 0-21.5-8.5T495-190v-215h117l40-80h108l-30-30h-98l-39 80h-98v-130h115l-30-30h-85v-175q0-13 8.5-21.5T525-800h118q8 0 15 4t11 11l84 150h-71l-42-80h-90v30h72l42 80h105l63 110q2 4 3 7.5t1 7.5q0 2-4 15l-63 110H664l-42 80h-72v30h90l42-80h71l-84 150q-4 7-11 11t-15 4H525Z"/></svg>
                         <p class="card-title">Network Assessment</p>
                         <p>We provide quick – yet secure – network deployment services with 24/7 support to keep your business operating.</p>
                         <p>Read more</p>
@@ -90,7 +92,8 @@
                 </a>
                 <a href="services/structure-cabling.html">
                     <div class="card">
-                        <img src="images/icon-services/structure-cabling.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#000000"><path d="M200-120q-17 0-28.5-11.5T160-160v-40h-40v-160q0-17 11.5-28.5T160-400h40v-280q0-66 47-113t113-47q66 0 113 47t47 113v400q0 33 23.5 56.5T600-200q33 0 56.5-23.5T680-280v-280h-40q-17 0-28.5-11.5T600-600v-160h40v-40q0-17 11.5-28.5T680-840h80q17 0 28.5 11.5T800-800v40h40v160q0 17-11.5 28.5T800-560h-40v280q0 66-47 113t-113 47q-66 0-113-47t-47-113v-400q0-33-23.5-56.5T360-760q-33 0-56.5 23.5T280-680v280h40q17 0 28.5 11.5T360-360v160h-40v40q0 17-11.5 28.5T280-120h-80Z"/></svg>
+                        
                         <p class="card-title">Structure cabling</p>
                         <p>Our expert technicians ensure seamless connectivity and efficient data management for your business.</p>
                         <p>Read More</p>
@@ -98,7 +101,7 @@
                 </a>
                 <a href="services/security-system-integration.html">
                     <div class="card">
-                        <img src="images/icon-services/security-system.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M480-80q-140-35-230-162.5T160-522v-238l320-120 320 120v238q0 152-90 279.5T480-80Zm0-62q106-35 175.5-128.5T737-480H480v-335l-260 97v196q0 12 .5 20.5T223-480h257v338Z"/></svg>
                         <p class="card-title">Security System Integration</p>
                         <p>Our team troubleshoots, diagnoses, and patches network issues for optimal security.</p>
                         <p>Read More</p>
@@ -106,7 +109,10 @@
                 </a>
                 <a href="services/backup-recovery.html">
                     <div class="card">
-                        <img src="images/icon-services/data-backup.svg"  alt="" width="70px">
+                        
+                          <svg class="probando1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database-backup-icon lucide-database-backup"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 12a9 3 0 0 0 5 2.69"/><path d="M21 9.3V5"/><path d="M3 5v14a9 3 0 0 0 6.47 2.88"/><path d="M12 12v4h4"/><path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16"/></svg>
+                              
+                        
                         <p class="card-title">Backup & Recovery</p>
                         <p>Ensure your data is always accessible with on-premise and cloud backup and disaster recovery solutions.</p>
                         <p>Read More</p>
@@ -114,7 +120,7 @@
                 </a>
                 <a href="services/project-management.html">
                     <div class="card">
-                        <img src="images/icon-services/management.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M180-120q-24.75 0-42.37-17.63Q120-155.25 120-180v-600q0-24.75 17.63-42.38Q155.25-840 180-840h205q5-35 32-57.5t63-22.5q36 0 63 22.5t32 57.5h205q24.75 0 42.38 17.62Q840-804.75 840-780v600q0 24.75-17.62 42.37Q804.75-120 780-120H180Zm0-60h600v-600H180v600Zm100-100h273v-60H280v60Zm0-170h400v-60H280v60Zm0-170h400v-60H280v60Zm200-177q14 0 24.5-10.5T515-832q0-14-10.5-24.5T480-867q-14 0-24.5 10.5T445-832q0 14 10.5 24.5T480-797ZM180-180v-600 600Z"/></svg>
                         <p class="card-title">Project Management</p>
                         <p>Help organizations achieve project goals within scope, time, and budget constraints by providing expert guidance and support throughout the project lifecycle.</p>
                         <p>Read More</p>
@@ -122,7 +128,7 @@
                 </a>
                 <a href="services/multimedia-meeting-room.html">
                     <div class="card">
-                        <img src="images/icon-services/multimedia-room.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M120-120v-60h92v-660h390v45h147v615h91v60H689v-615h-87v615H120Zm152-660v600-600Zm179 340q17 0 28.5-11.5T491-480q0-17-11.5-28.5T451-520q-17 0-28.5 11.5T411-480q0 17 11.5 28.5T451-440ZM272-180h270v-600H272v600Z"/></svg>
                         <p class="card-title">Multimedia Meeting Room</p>
                         <p>We create easy-to-use, flexible meeting spaces that optimize productivity and inclusiveness.</p>
                         <p>Read More</p>
@@ -134,7 +140,7 @@
             <div class="residential-cards">
                 <a href="services/entertaiment.html">
                     <div class="card">
-                        <img src="images/icon-services/speaker.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M322-120v-87H132q-24 0-42-18.5T72-268v-512q0-24 18-42t42-18h680q24 0 42 18t18 42v125h-60v-125H132v513h348v147H322Zm300-171.88Q622-330 648.88-357q26.88-27 65-27Q752-384 779-357.12q27 26.88 27 65Q806-254 779.12-227q-26.88 27-65 27Q676-200 649-226.88q-27-26.88-27-65ZM847.76-625Q864-625 876-613t12 28.39v424.22Q888-144 876-132t-28.24 12H580.24Q564-120 552-132t-12-28.39v-424.22Q540-601 552-613t28.24-12h267.52ZM714-586q-24 0-42 18t-18 42q0 24 18 42t42 18q24 0 42-18t18-42q0-24-18-42t-42-18Zm0 428q59 0 96.5-37.5T848-292q0-59-37.5-96.5T714-426q-59 0-96.5 37.5T580-292q0 59 37.5 96.5T714-158Z"/></svg>
                         <p class="card-title">Entertaiment</p>
                         <p>Transform your space with our expert home and business entertainment systems installation, providing seamless integration and superior performance.</p>
                         <p>Read More</p>
@@ -142,7 +148,7 @@
                 </a>
                 <a href="services/microsoft-apple-support.html">
                     <div class="card">
-                        <img src="images/icon-services/computer-support.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#000000"><path d="M480-540ZM80-160v-80h400v80H80Zm120-120q-33 0-56.5-23.5T120-360v-360q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720H200v360h280v80H200Zm600 40v-320H640v320h160Zm-180 80q-25 0-42.5-17.5T560-220v-360q0-25 17.5-42.5T620-640h200q25 0 42.5 17.5T880-580v360q0 25-17.5 42.5T820-160H620Zm100-300q13 0 21.5-9t8.5-21q0-13-8.5-21.5T720-520q-12 0-21 8.5t-9 21.5q0 12 9 21t21 9Zm0 60Z"/></svg>
                         <p class="card-title">Microsoft & Apple Support</p>
                         <p>Professional tech support for all your devices — Windows, macOS, and beyond. We keep your systems running smoothly with fast solutions for everyday issues and ongoing maintenance.</p>
                         <p>Read More</p>
@@ -150,7 +156,8 @@
                 </a>
                 <a href="services/mesh-wifi.html">
                     <div class="card">
-                        <img src="images/icon-services/mesh-wifi.svg"  alt="" width="70px">
+                        <svg class="probando1" class="probando1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-wifi-icon lucide-house-wifi"><path d="M9.5 13.866a4 4 0 0 1 5 .01"/><path d="M12 17h.01"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M7 10.754a8 8 0 0 1 10 0"/></svg>
+                        
                         <p class="card-title">Mesh WIFI</p>
                         <p>Enjoy seamless, high-speed internet in every corner of your home or office.Say goodbye to weak signals and dead zones with a mesh network designed for full coverage and stability.</p>
                         <p>Read More</p>
@@ -159,7 +166,8 @@
 
                 <a href="services/security-camera.html">
                     <div class="card">
-                        <img src="images/icon-services/security-camera.svg"  alt="" width="70px">
+                        <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="m715-368-68-39 125-93 68 39-125 93Zm-197-99 130-96-315-178-75 127 260 147Zm-65-137ZM160-160v-60h210v-262l-142-80q-22.07-12.96-28.53-36.98Q193-623 206-645l75-125q13-21 36.5-27.5T362-792l395 223-235 173-92-52v228q0 24.75-17.62 42.37Q394.75-160 370-160H160Z"/></svg>
+                        
                         <p class="card-title">Security cameras</p>
                         <p>Monitor your home or business from anywhere with high-definition cameras and reliable recording options.</p>
                         <p>Read More</p>
@@ -197,7 +205,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="" class="footer-contact">Get in Touch</a>
+            <a href="./form.html" class="footer-contact">Get in Touch</a>
             
         </footer>
         <hr>
