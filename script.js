@@ -1,4 +1,4 @@
-
+/*
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".nav-container");
 
@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-
+*/
 
 
 
