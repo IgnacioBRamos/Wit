@@ -580,7 +580,7 @@ main h1{
 }
 
 main p, main li{
-    line-height: 1.5;
+    line-height: 1.7;
     max-width: 70ch;
     list-style: disc;
 }
@@ -603,6 +603,11 @@ main a{
 }
 
 .steps-service div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     padding: 3rem;
     max-width: 60ch;
     text-align: center;
@@ -702,6 +707,15 @@ form input[type=submit]:hover{
         max-width: 90%;
     }
 
+    .steps-service div{
+        padding: 1rem;
+    }
+
+    .footer{
+        gap: 2rem;
+        justify-content: flex-start;
+    }
+
 }
 
 
@@ -716,5 +730,8 @@ form input[type=submit]:hover{
     }
     .business-cards .card p{
         max-width: 45ch;
+    }
+    .policy-container{
+        align-items: start;
     }
 }
