@@ -1,6 +1,6 @@
-/*
+
 window.addEventListener("scroll", function () {
-  const header = document.querySelector(".nav-container");
+  const header = document.querySelector(".header-section");
 
   if (window.scrollY > 50) {
     header.classList.add("scrolled");
@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
-*/
+
 
 
 
@@ -41,58 +41,84 @@ function addAnimation() {
 
 
 
+// Navbar functionality
 (() => {
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.nav');
+  const overlay = document.querySelector('.mobile-overlay');
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-  const openNav = document.querySelector(".open-menu"),
-    closeNav = document.querySelector(".close-menu"),
-    navMenu = document.querySelector(".nav-links-container"),
-    overlay = document.querySelector(".overlay"),
-    mediaSize = 992;
-
-  openNav.addEventListener("click", toggleMenu);
-  closeNav.addEventListener("click", toggleMenu);
-  overlay.addEventListener("click",toggleMenu);
-
-
-  function toggleMenu() {
-    navMenu.classList.toggle("open");
-    overlay.classList.toggle("active");
+  // Toggle mobile menu
+  function toggleMobileMenu() {
+    const isOpen = nav.classList.contains('active');
+    
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 
+  // Close mobile menu
+  function closeMobileMenu() {
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+    mobileToggle.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 
+  // Toggle dropdown
+  function toggleDropdown(dropdown) {
+    const isActive = dropdown.classList.contains('active');
+    
+    // Close all other dropdowns
+    dropdowns.forEach(d => d.classList.remove('active'));
+    
+    // Toggle current dropdown
+    if (!isActive) {
+      dropdown.classList.add('active');
+    }
+  }
 
-  navMenu.addEventListener("click", (event) => {
+  // Event listeners
+  mobileToggle.addEventListener('click', toggleMobileMenu);
+  overlay.addEventListener('click', closeMobileMenu);
 
+  // Dropdown functionality
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleDropdown(dropdown);
+    });
+  });
 
-    if (event.target.hasAttribute("data-toggle") && window.innerWidth <= mediaSize) {
-      event.preventDefault();
-      const dropdownMenuBranch = event.target.parentElement;
-
-
-      if (dropdownMenuBranch.classList.contains("active")) {
-        collapseDropdownMenu();
-      }
-
-      else {
-        if (navMenu.querySelector(".dropdown-menu-branch.active")) {
-          collapseDropdownMenu();
-        }
-        dropdownMenuBranch.classList.add("active");
-        const dropdownMenu = dropdownMenuBranch.querySelector(".dropdown-menu");
-        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + "px";
-
-      }
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+      dropdowns.forEach(d => d.classList.remove('active'));
     }
   });
 
-  function collapseDropdownMenu(){
-    navMenu.querySelector(".dropdown-menu-branch.active .dropdown-menu").removeAttribute("style");
-    navMenu.querySelector(".dropdown-menu-branch.active").classList.remove("active");
-  }
+  // Close mobile menu on window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992) {
+      closeMobileMenu();
+    }
+  });
 
-
-
-
+  // Close mobile menu on scroll
+  window.addEventListener('scroll', () => {
+    if (nav.classList.contains('active')) {
+      closeMobileMenu();
+    }
+  });
 })();
 
 

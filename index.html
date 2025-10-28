@@ -16,57 +16,89 @@
     <title>WIT Solutions Group | Managed IT Services | IT Consulting & Business Solutions</title>
 </head>
 <body>
-    <div id="main-container">
-        <header class="nav-container">
-            <div class="nav-logo">
-                <a href="./index.html"><img src="images/brand/wit.svg" alt="WIT LOGO IMAGE"></a>
-            </div>
-            <i class="ri-menu-line open-menu"></i>
-            <div class="overlay"></div>
-            <nav class="nav-links-container">
-                <i class="ri-close-line close-menu"></i>
-                <ul class="nav-links">
-                    <li class="nav-link-item"><a href="./whyUs.html">Why choose us</a></li>
-                    <li class="nav-link-item dropdown-menu-branch">
-                        <a href="#" data-toggle="dropdown-menu">Business Service<i class="ri-arrow-down-s-line"></i></a>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="section-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./">
+                        <img src="images/brand/wit.svg" alt="WIT Solutions Group">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="./whyUs.html" class="nav-link">Why choose us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Business Service
+                                <i class="ri-arrow-down-s-line dropdown-icon"></i>
+                            </a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item"><a href="./services/network-asessment.html">Network asessment</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/structure-cabling.html">Structure Cabling</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/security-system-integration.html">Security System Integration</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/backup-recovery.html">Backup & Recovery</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/project-management.html">Project Management</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/multimedia-meeting-room.html">Multimedia Meeting Room</a></li>
+                                <li><a href="./services/network-asessment.html">Network assessment</a></li>
+                                <li><a href="./services/structure-cabling.html">Structure Cabling</a></li>
+                                <li><a href="./services/security-system-integration.html">Security System Integration</a></li>
+                                <li><a href="./services/backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="./services/project-management.html">Project Management</a></li>
+                                <li><a href="./services/multimedia-meeting-room.html">Multimedia Meeting Room</a></li>
                             </ul>
-                    </li>
-                    <li class="nav-link-item dropdown-menu-branch">
-                        <a href="#" data-toggle="dropdown-menu">Residential Service<i class="ri-arrow-down-s-line"></i></a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-menu-item"><a href="./services/entertaiment.html">Entertaiment</a></li>
-                            <li class="dropdown-menu-item"><a href="./services/microsoft-apple-support.html">Microsoft & Apple Support</a></li>
-                            <li class="dropdown-menu-item"><a href="./services/mesh-wifi.html">Mesh WIFI</a></li>
-                            <li class="dropdown-menu-item"><a href="./services/security-camera.html">Security Cameras</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-link-item"><a href="./form.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-         
-        <section class="hero-section">
-            <div class="hero-text">
-                <h1><span>Premium IT</span> solutions for your technology needs.</h1>
-                <p>At WIT Solutions Group, we combine innovation and precision to deliver tailored technology services that grow with your business. More than support — we're in it for the long run.</p>
-                <a href="form.html">Let's get started</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Residential Service
+                                <i class="ri-arrow-down-s-line dropdown-icon"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./services/entertaiment.html">Entertainment</a></li>
+                                <li><a href="./services/microsoft-apple-support.html">Microsoft & Apple Support</a></li>
+                                <li><a href="./services/mesh-wifi.html">Mesh WIFI</a></li>
+                                <li><a href="./services/security-camera.html">Security Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./form.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Overlay -->
+                <div class="mobile-overlay"></div>
             </div>
-            <div class="hero-img">
-                <img src="images/brand/ZorroWit.svg" alt="Fox WIT LOGO">
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="section-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span>Premium IT</span> solutions for your technology needs.</h1>
+                    <p>At WIT Solutions Group, we combine innovation and precision to deliver tailored technology services that grow with your business. More than support — we're in it for the long <br>Your Technology Success partner.<br>We help you improve efficiency, stay secure, and grow with personalized tech solutions.</p>
+                    <a href="form.html">Get a free checkup</a>
+                </div>
+                <div class="hero-img">
+                    <img src="images/brand/ZorroWit.svg" alt="Fox WIT LOGO">
+                </div>
             </div>
-        
-        </section>
+        </div>
+    </section>
+    
+    <!-- Logos Section -->
+    <section class="logos-section section-container">
         <div class="scroller">
             <div class="scroller__inner">
-                <img src="images/logos/dialpad.svg" alt="Dialpad Logo">
+                <!--<img src="images/logos/dialpad.svg" alt="Dialpad Logo">-->
                 <img src="images/logos/DW.svg" alt="DW Logo">
                 <img src="images/logos/logoDell.svg" alt="Dell Logo">
                 <img src="images/logos/logoFirewalla.svg" alt="Firewalla Logo">
@@ -74,37 +106,40 @@
                 <img src="images/logos/logoReolink.svg" alt="Reolink Logo">
                 <img src="images/logos/logoUnify.svg" alt="Unify Logo">
                 <img src="images/logos/pdk.svg " alt="PDK Logo">
-                <img src="images/logos/t-mobile.svg" alt="T-Mobile Logo">
-
+                <img src="images/logos/t-mobile.svg" alt="T-Mobile Logo"> 
             </div>
         </div>
-        <section class="services-section">
+    </section>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="section-container">
             <span>Our Services</span>
-            <p class="service-subtitle">Business services</p>
+            
             <div class="business-cards">
                 <a href="services/network-asessment.html">
                     <div class="card">
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M317-160q-8 0-15-4t-11-11l-84-150h71l42 80h90v-30h-72l-42-80H191l-63-110q-2-4-3-7.5t-1-7.5q0-2 4-15l63-110h105l42-80h72v-30h-90l-42 80h-71l84-150q4-7 11-11t15-4h118q13 0 21.5 8.5T465-770v175h-85l-30 30h115v130h-98l-39-80h-98l-30 30h108l40 80h117v215q0 13-8.5 21.5T435-160H317Zm208 0q-13 0-21.5-8.5T495-190v-215h117l40-80h108l-30-30h-98l-39 80h-98v-130h115l-30-30h-85v-175q0-13 8.5-21.5T525-800h118q8 0 15 4t11 11l84 150h-71l-42-80h-90v30h72l42 80h105l63 110q2 4 3 7.5t1 7.5q0 2-4 15l-63 110H664l-42 80h-72v30h90l42-80h71l-84 150q-4 7-11 11t-15 4H525Z"/></svg>
-                        <p class="card-title">Network Assessment</p>
-                        <p>We provide quick – yet secure – network deployment services with 24/7 support to keep your business operating.</p>
-                        <p>Read more</p>
+                        <p class="card-title">Compliance & Risk Management</p>
+                        <!--<p>We provide quick – yet secure – network deployment services with 24/7 support to keep your business operating.</p>-->
+                        <p>Whether you handle financial, legal, or sensitive client data, we help you meet compliance requirements and reduce risk with the right policies, reporting, and protections in place.</p>
+                        
                     </div>
                 </a>
                 <a href="services/structure-cabling.html">
                     <div class="card">
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#000000"><path d="M200-120q-17 0-28.5-11.5T160-160v-40h-40v-160q0-17 11.5-28.5T160-400h40v-280q0-66 47-113t113-47q66 0 113 47t47 113v400q0 33 23.5 56.5T600-200q33 0 56.5-23.5T680-280v-280h-40q-17 0-28.5-11.5T600-600v-160h40v-40q0-17 11.5-28.5T680-840h80q17 0 28.5 11.5T800-800v40h40v160q0 17-11.5 28.5T800-560h-40v280q0 66-47 113t-113 47q-66 0-113-47t-47-113v-400q0-33-23.5-56.5T360-760q-33 0-56.5 23.5T280-680v280h40q17 0 28.5 11.5T360-360v160h-40v40q0 17-11.5 28.5T280-120h-80Z"/></svg>
                         
-                        <p class="card-title">Structure cabling</p>
-                        <p>Our expert technicians ensure seamless connectivity and efficient data management for your business.</p>
-                        <p>Read More</p>
+                        <p class="card-title">OnSite Technical Support & Training</p>
+                        <p>Our team of engineers will come to your business and help you with any technical issue or challenge you might have. They can also train your team on how to make the best out of your tech.</p>
+                        
                     </div>
                 </a>
                 <a href="services/security-system-integration.html">
                     <div class="card">
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M480-80q-140-35-230-162.5T160-522v-238l320-120 320 120v238q0 152-90 279.5T480-80Zm0-62q106-35 175.5-128.5T737-480H480v-335l-260 97v196q0 12 .5 20.5T223-480h257v338Z"/></svg>
-                        <p class="card-title">Security System Integration</p>
-                        <p>Our team troubleshoots, diagnoses, and patches network issues for optimal security.</p>
-                        <p>Read More</p>
+                        <p class="card-title">Strategic Goal-Oriented IT Planning</p>
+                        <p>You get tech that’s aligned your business goals, whether that's scaling up, opening new locations, or migrating systems without disruption.</p>
+                        
                     </div>
                 </a>
                 <a href="services/backup-recovery.html">
@@ -113,28 +148,30 @@
                           <svg class="probando1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database-backup-icon lucide-database-backup"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 12a9 3 0 0 0 5 2.69"/><path d="M21 9.3V5"/><path d="M3 5v14a9 3 0 0 0 6.47 2.88"/><path d="M12 12v4h4"/><path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16"/></svg>
                               
                         
-                        <p class="card-title">Backup & Recovery</p>
-                        <p>Ensure your data is always accessible with on-premise and cloud backup and disaster recovery solutions.</p>
-                        <p>Read More</p>
+                        <p class="card-title">Cloud Solutions for All Business Types</p>
+                        <p>You'll be able to work from anywhere with secure, flexible cloud infrastructure that supports your team and your data — whether you’re remote, hybrid, or in-office.</p>
+                        
                     </div>
                 </a>
                 <a href="services/project-management.html">
                     <div class="card">
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M180-120q-24.75 0-42.37-17.63Q120-155.25 120-180v-600q0-24.75 17.63-42.38Q155.25-840 180-840h205q5-35 32-57.5t63-22.5q36 0 63 22.5t32 57.5h205q24.75 0 42.38 17.62Q840-804.75 840-780v600q0 24.75-17.62 42.37Q804.75-120 780-120H180Zm0-60h600v-600H180v600Zm100-100h273v-60H280v60Zm0-170h400v-60H280v60Zm0-170h400v-60H280v60Zm200-177q14 0 24.5-10.5T515-832q0-14-10.5-24.5T480-867q-14 0-24.5 10.5T445-832q0 14 10.5 24.5T480-797ZM180-180v-600 600Z"/></svg>
-                        <p class="card-title">Project Management</p>
+                        <p class="card-title">Hardware, Software & Licensing</p>
                         <p>Help organizations achieve project goals within scope, time, and budget constraints by providing expert guidance and support throughout the project lifecycle.</p>
-                        <p>Read More</p>
+                        
                     </div>
                 </a>
                 <a href="services/multimedia-meeting-room.html">
                     <div class="card">
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M120-120v-60h92v-660h390v45h147v615h91v60H689v-615h-87v615H120Zm152-660v600-600Zm179 340q17 0 28.5-11.5T491-480q0-17-11.5-28.5T451-520q-17 0-28.5 11.5T411-480q0 17 11.5 28.5T451-440ZM272-180h270v-600H272v600Z"/></svg>
-                        <p class="card-title">Multimedia Meeting Room</p>
-                        <p>We create easy-to-use, flexible meeting spaces that optimize productivity and inclusiveness.</p>
-                        <p>Read More</p>
+                        <p class="card-title">Disaster Recovery Planning</p>
+                        <p>Beyond backups, we create full recovery strategies to ensure your business can keep operating, even if something serious goes wrong.</p>
                     </div>
                 </a>
+                
             </div>
+            
+            <!--
             <p class="service-subtitle">Residential services</p>
             
             <div class="residential-cards">
@@ -143,7 +180,7 @@
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#ECEAEB"><path d="M322-120v-87H132q-24 0-42-18.5T72-268v-512q0-24 18-42t42-18h680q24 0 42 18t18 42v125h-60v-125H132v513h348v147H322Zm300-171.88Q622-330 648.88-357q26.88-27 65-27Q752-384 779-357.12q27 26.88 27 65Q806-254 779.12-227q-26.88 27-65 27Q676-200 649-226.88q-27-26.88-27-65ZM847.76-625Q864-625 876-613t12 28.39v424.22Q888-144 876-132t-28.24 12H580.24Q564-120 552-132t-12-28.39v-424.22Q540-601 552-613t28.24-12h267.52ZM714-586q-24 0-42 18t-18 42q0 24 18 42t42 18q24 0 42-18t18-42q0-24-18-42t-42-18Zm0 428q59 0 96.5-37.5T848-292q0-59-37.5-96.5T714-426q-59 0-96.5 37.5T580-292q0 59 37.5 96.5T714-158Z"/></svg>
                         <p class="card-title">Entertainment</p>
                         <p>Transform your space with our expert home and business entertainment systems installation, providing seamless integration and superior performance.</p>
-                        <p>Read More</p>
+                        
                     </div>
                 </a>
                 <a href="services/microsoft-apple-support.html">
@@ -151,7 +188,7 @@
                         <svg class="probando" xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#000000"><path d="M480-540ZM80-160v-80h400v80H80Zm120-120q-33 0-56.5-23.5T120-360v-360q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720H200v360h280v80H200Zm600 40v-320H640v320h160Zm-180 80q-25 0-42.5-17.5T560-220v-360q0-25 17.5-42.5T620-640h200q25 0 42.5 17.5T880-580v360q0 25-17.5 42.5T820-160H620Zm100-300q13 0 21.5-9t8.5-21q0-13-8.5-21.5T720-520q-12 0-21 8.5t-9 21.5q0 12 9 21t21 9Zm0 60Z"/></svg>
                         <p class="card-title">Microsoft & Apple Support</p>
                         <p>Professional tech support for all your devices — Windows, macOS, and beyond. We keep your systems running smoothly with fast solutions for everyday issues and ongoing maintenance.</p>
-                        <p>Read More</p>
+                        
                     </div>
                 </a>
                 <a href="services/mesh-wifi.html">
@@ -160,7 +197,7 @@
                         
                         <p class="card-title">Mesh WIFI</p>
                         <p>Enjoy seamless, high-speed internet in every corner of your home or office.Say goodbye to weak signals and dead zones with a mesh network designed for full coverage and stability.</p>
-                        <p>Read More</p>
+                        
                     </div>
                 </a>
 
@@ -170,15 +207,49 @@
                         
                         <p class="card-title">Security cameras</p>
                         <p>Monitor your home or business from anywhere with high-definition cameras and reliable recording options.</p>
-                        <p>Read More</p>
+                        
                     </div>
                 </a>
+                
 
             </div>
-        </section>
+            -->
+            <a href="form.html" class="button">Call To Action</a>
+        </div>
         
+    </section>
 
-        <footer class="footer">
+    <!--Form Section-->>
+    
+    <div class="section-container">
+        <div class="form-container">
+            <h1>Let's work together</h1>
+            
+            <form action="https://formspree.io/f/xannggzw" method="POST" id="formulario">
+                    <label for="name">Name</label><input type="text" name="Name" id="name" maxlength="50" required>
+                    <label for="email">Email</label><input type="text" name="Email" id="email" maxlength="254" >
+                    <span id="email-error">Please enter a valid email address.</span>
+                    <label for="phone">Phone Number</label><input type="text" name="Phone" id="phone" maxlength="15" >
+                    <span id="phone-error">Please enter a valid number without dashes or spaces. The area code is optional.</span>
+                    <label for="message">Message</label><textarea name="Message" id="message"></textarea>
+                    <div class="d-flex">
+                        <input type="checkbox" name="privacy" id="privacy">
+                        <label for="privacy">I agree to allow WIT Solutions Group to store and process my personal data.*</label>
+                        <span id="checkbox-error">Please complete this required field.</span>
+                        <p>For more information on how we process your data, please see our <a href="./policy.html">privacy policy</a></p>
+                    </div>
+                    <input type="submit" value="Send">
+            </form>
+            
+        </div>
+    </div>
+
+
+    
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="section-container">
+            <div class="footer">
             <div class="footer-about">
                 <p>Who is WIT?</p>
                 <p>WIT Solutions Group sets the new standard for Managed Service Providers. WIT is a company where innovation meets precision on an ever-evolving digital landscape. We consider that businesses require more than just an "IT Guy", they need a partner that can help them grow every mile on the way to success.</p>
@@ -187,7 +258,7 @@
                 <div>
                     <p>Business services</p>
                     <ul>
-                        <li><a href="services/network-asessment.html">Network asessment</a></li>
+                        <li><a href="services/network-asessment.html">Network assessment</a></li>
                         <li><a href="services/structure-cabling.html">Structured cabling</a></li>
                         <li><a href="services/security-system-integration.html">Security system integration</a></li>
                         <li><a href="services/backup-recovery.html">Backup & Recovery</a></li>
@@ -205,15 +276,15 @@
                     </ul>
                 </div>
             </div>
-            <a href="./form.html" class="footer-contact">Get in Touch</a>
+                <a href="./form.html" class="footer-contact">Get a free check up</a>
+            </div>
             
-        </footer>
-        <hr>
-        <p class="copyright">© 2025 WIT Solutions Group. · <a href="./policy.html">Privacy Policy </a></p>
-        <p class="copyright">© This website is powered by WIT digital</p>
-        <!-- <p class="copyright">© This website was made with ❤️ by <a href="https://github.com/IgnacioBRamos">Ignacio Ramos</a></p> -->
-
-    </div>
+            <hr>
+            <p class="copyright">© 2025 WIT Solutions Group. · <a href="./policy.html">Privacy Policy </a></p>
+            <p class="copyright">© This website is powered by WIT digital</p>
+            <!-- <p class="copyright">© This website was made with ❤️ by <a href="https://github.com/IgnacioBRamos">Ignacio Ramos</a></p> -->
+        </div>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>
