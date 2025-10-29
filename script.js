@@ -119,6 +119,14 @@ function addAnimation() {
       closeMobileMenu();
     }
   });
+
+  // Close mobile menu when clicking on nav links
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
 })();
 
 

@@ -15,41 +15,40 @@
 
 <body>
     <!-- Header Section -->
-    <header class="header-section">
+    <header class="header">
         <div class="section-container">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="./index.html"><img src="./images/brand/wit.svg" alt="WIT LOGO IMAGE"></a>
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="images/brand/wit.svg" alt="WIT Solutions Group">
+                    </a>
                 </div>
-                <i class="ri-menu-line open-menu"></i>
-                <div class="overlay"></div>
-                <nav class="nav-links-container">
-                    <i class="ri-close-line close-menu"></i>
-                    <ul class="nav-links">
-                        <li class="nav-link-item"><a href="./whyUs.html">Why choose us</a></li>
-                        <li class="nav-link-item dropdown-menu-branch">
-                            <a href="#" data-toggle="dropdown-menu">Business Service<i class="ri-arrow-down-s-line"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-menu-item"><a href="./services/network-asessment.html">Network assessment</a></li>
-                                    <li class="dropdown-menu-item"><a href="./services/structure-cabling.html">Structure Cabling</a></li>
-                                    <li class="dropdown-menu-item"><a href="./services/security-system-integration.html">Security System Integration</a></li>
-                                    <li class="dropdown-menu-item"><a href="./services/backup-recovery.html">Backup & Recovery</a></li>
-                                    <li class="dropdown-menu-item"><a href="./services/project-management.html">Project Management</a></li>
-                                    <li class="dropdown-menu-item"><a href="./services/multimedia-meeting-room.html">Multimedia Meeting Room</a></li>
-                                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="./index.html#services" class="nav-link">Services</a>
                         </li>
-                        <li class="nav-link-item dropdown-menu-branch">
-                            <a href="#" data-toggle="dropdown-menu">Residential Service<i class="ri-arrow-down-s-line"></i></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item"><a href="./services/entertaiment.html">Entertainment</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/microsoft-apple-support.html">Microsoft & Apple Support</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/mesh-wifi.html">Mesh WIFI</a></li>
-                                <li class="dropdown-menu-item"><a href="./services/security-camera.html">Security Cameras</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a href="./index.html#why-choose-us" class="nav-link">Why choose us</a>
                         </li>
-                        <li class="nav-link-item"><a href="./form.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a href="./index.html#form" class="nav-link">Contact</a>
+                        </li>
                     </ul>
                 </nav>
+
+                <!-- Mobile Overlay -->
+                <div class="mobile-overlay"></div>
             </div>
         </div>
     </header>
@@ -124,38 +123,27 @@
     <footer class="footer-section">
         <div class="section-container">
             <div class="footer">
-                <div class="footer-about">
-                    <p>Who is WIT?</p>
-                    <p>WIT Solutions Group sets the new standard for Managed Service Providers. WIT is a company where innovation meets precision on an ever-evolving digital landscape. We consider that businesses require more than just an "IT Guy", they need a partner that can help them grow every mile on the way to success.</p>
+            <div class="footer-about">
+                <p>Who is WIT?</p>
+                <p>WIT Solutions Group sets the new standard for Managed Service Providers. WIT is a company where innovation meets precision on an ever-evolving digital landscape. We consider that businesses require more than just an "IT Guy", they need a partner that can help them grow every mile on the way to success.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <p>Quick Links</p>
+                    <ul>
+                        <li><a href="./index.html#services">Services</a></li>
+                        <li><a href="./index.html#why-choose-us">Why choose us</a></li>
+                        <li><a href="./index.html#form">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="footer-links">
-                    <div>
-                        <p>Business services</p>
-                        <ul>
-                            <li><a href="services/network-asessment.html">Network assessment</a></li>
-                            <li><a href="services/structure-cabling.html">Structured cabling</a></li>
-                            <li><a href="services/security-system-integration.html">Security system integration</a></li>
-                            <li><a href="services/backup-recovery.html">Backup & Recovery</a></li>
-                            <li><a href="services/project-management.html">Project management</a></li>
-                            <li><a href="services/multimedia-meeting-room.html">Multimedia meeting room</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>Residential services</p>
-                        <ul>
-                            <li><a href="services/entertaiment.html">Entertainment</a></li>
-                            <li><a href="services/microsoft-apple-support.html">Microsoft & Apple support</a></li>
-                            <li><a href="services/mesh-wifi.html">Mesh WIFI</a></li>
-                            <li><a href="services/security-camera.html">Security cameras</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="./form.html" class="footer-contact">Get in Touch</a>
+            </div>
+                <a href="./index.html#form" class="button">Get a free checkup</a>
             </div>
             
             <hr>
             <p class="copyright">© 2025 WIT Solutions Group. · <a href="./policy.html">Privacy Policy </a></p>
             <p class="copyright">© This website is powered by WIT digital</p>
+            <!-- <p class="copyright">© This website was made with ❤️ by <a href="https://github.com/IgnacioBRamos">Ignacio Ramos</a></p> -->
         </div>
     </footer>
     <script src="./script.js"></script>
