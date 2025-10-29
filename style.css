@@ -772,12 +772,21 @@ main .section-container a{
     padding: 2rem 0;
 }
 
+
+
+
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
 .form-container{
     padding: var(--spacing-lg);
     background-color: var(--color-surface);
     max-width: 50ch;
     border-radius: var(--border-radius-sm);
-    margin: 6rem auto;
 }
 .form-container h1{
     text-align: center;
@@ -823,6 +832,7 @@ form input[type=submit] {
     cursor: pointer;
     font-size: var(--step-2);
     position: relative;
+    transition: background-color 0.5s;
 }
 
 form input[type=submit]:hover{
