@@ -1,10 +1,10 @@
 
 window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header-section");
+  const header = document.querySelector(".header-section") || document.querySelector(".header");
 
-  if (window.scrollY > 50) {
+  if (header && window.scrollY > 50) {
     header.classList.add("scrolled");
-  } else {
+  } else if (header) {
     header.classList.remove("scrolled");
   }
 });
@@ -18,7 +18,7 @@ window.addEventListener("scroll", function () {
 
 const scrollers = document.querySelectorAll(".scroller");
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (scrollers.length > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
 
@@ -85,48 +85,54 @@ function addAnimation() {
     }
   }
 
-  // Event listeners
-  mobileToggle.addEventListener('click', toggleMobileMenu);
-  overlay.addEventListener('click', closeMobileMenu);
+  // Event listeners - solo si los elementos existen
+  if (mobileToggle && nav && overlay) {
+    mobileToggle.addEventListener('click', toggleMobileMenu);
+    overlay.addEventListener('click', closeMobileMenu);
 
-  // Dropdown functionality
-  dropdowns.forEach(dropdown => {
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleDropdown(dropdown);
+    // Close mobile menu on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 992) {
+        closeMobileMenu();
+      }
     });
-  });
 
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(d => d.classList.remove('active'));
-    }
-  });
-
-  // Close mobile menu on window resize
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 992) {
-      closeMobileMenu();
-    }
-  });
-
-  // Close mobile menu on scroll
-  window.addEventListener('scroll', () => {
-    if (nav.classList.contains('active')) {
-      closeMobileMenu();
-    }
-  });
-
-  // Close mobile menu when clicking on nav links
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeMobileMenu();
+    // Close mobile menu on scroll
+    window.addEventListener('scroll', () => {
+      if (nav.classList.contains('active')) {
+        closeMobileMenu();
+      }
     });
-  });
+
+    // Close mobile menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+  }
+
+  // Dropdown functionality - solo si existen dropdowns
+  if (dropdowns.length > 0) {
+    dropdowns.forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      
+      if (toggle) {
+        toggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleDropdown(dropdown);
+        });
+      }
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        dropdowns.forEach(d => d.classList.remove('active'));
+      }
+    });
+  }
 })();
 
 
@@ -137,7 +143,9 @@ function addAnimation() {
 
 const form = document.getElementById("formulario")
 
-form.addEventListener("submit", handlesubmit)
+if (form) {
+  form.addEventListener("submit", handlesubmit)
+}
 
 async function handlesubmit(event) {
     event.preventDefault()
